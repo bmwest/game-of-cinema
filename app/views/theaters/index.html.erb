@@ -1,0 +1,6 @@
+<h1> All Theaters </h1>
+<% @theaters.each do |theater| %>
+  <%= link_to theater.name, theater_path(theater) %>
+<% end %>
+
+<%= link_to "Add New Theater", new_theater_path %>
