@@ -8,11 +8,10 @@ Things you may want to cover:
 * Ruby version 2.3.3
 * Badges:
 Build status:
-https://app.codeship.com/projects/17128240-e4b5-0134-b142-068a725f1d1c/status?branch=master
-Code climate:
-https://codeclimate.com/github/bmwest/game-of-cinema.png
-Coverage status:
-https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_unknown.png
+![Build Status](https://app.codeship.com/projects/17128240-e4b5-0134-b142-068a725f1d1c/status?branch=master)
+![Code Climate](https://codeclimate.com/github/bmwest/game-of-cinema.png)
+![Coverage Status](https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_unknown.png)
+
 
 * System dependencies
 
