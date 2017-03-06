@@ -16,4 +16,19 @@ feature "visitor sees a list of theaters" do
 
     expect(page).to have_content "New Theater Form"
   end
+
+  scenario "clicks link and is taken to show page for given theater" do
+    amc = Theater.create(name: 'AMC', address: '33 Harrison Ave', city: 'Phildelphia', state: 'PA', zip: '19177')
+
+    visit theaters_path
+
+    click_link "AMC"
+
+    expect(page).to have_content amc.name
+    expect(page).to have_content amc.address
+    expect(page).to have_content amc.city
+    expect(page).to have_content amc.state
+    expect(page).to have_content amc.zip
+  end
+
 end
