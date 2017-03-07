@@ -2,5 +2,5 @@
 <% @theaters.each do |theater| %>
   <%= link_to theater.name, theater_path(theater) %>
 <% end %>
-
+<br>
 <%= link_to "Add New Theater", new_theater_path %>
