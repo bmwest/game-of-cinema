@@ -68,7 +68,6 @@ feature "visitor sees information for a specific theater" do
   scenario "unauthenticated user clicks link and is taken to edit" do
     user = FactoryGirl.create(:user, role: 'member')
 
-
     amc = Theater.create(name: 'AMC', address: '33 Harrison Ave', city: 'Phildelphia', state: 'PA', zip: '19177', user: user)
 
     visit root_path

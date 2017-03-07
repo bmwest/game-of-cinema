@@ -16,7 +16,6 @@ feature "visitor sees a list of theaters" do
 
   scenario "clicks link and is taken to show page for given theater" do
     user = FactoryGirl.create(:user, role: 'member')
-    
     amc = Theater.create(name: 'AMC', address: '33 Harrison Ave', city: 'Phildelphia', state: 'PA', zip: '19177', user: user)
 
     visit theaters_path
