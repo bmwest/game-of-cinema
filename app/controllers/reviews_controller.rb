@@ -13,7 +13,10 @@ class ReviewsController < ApplicationController
       redirect_to theater_path(@theater)
     else
       flash[:notice] = @review.errors.full_messages
-      redirect_to theater_path(@theater)
+      @user = @theater.user
+      @reviews = @theater.reviews
+      @review = Review.new
+      render "theaters/show"
     end
   end
 
@@ -34,9 +37,9 @@ class ReviewsController < ApplicationController
   end
 
   def authorize_user
-   if !user_signed_in? || current_user.admin?
-    flash[:notice] = "Please log in to use this feature"
-    redirect_to new_user_session_path
-   end
+    if !user_signed_in? || current_user.admin?
+      flash[:notice] = "Please log in to use this feature"
+      redirect_to new_user_session_path
+    end
   end
 end

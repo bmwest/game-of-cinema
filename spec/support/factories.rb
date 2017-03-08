@@ -8,10 +8,10 @@ FactoryGirl.define do
   end
 
   factory :theater do
-  name 'Cinema'
-  address '123 Street'
-  city 'Philadelphia'
-  state 'PA'
-  zip '19123'
+    sequence(:name) { |n| "Cinema#{n}" }
+    address '123 Street'
+    city 'Philadelphia'
+    state 'PA'
+    zip '19123'
   end
 end
