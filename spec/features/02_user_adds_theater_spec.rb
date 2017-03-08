@@ -7,10 +7,15 @@ require "rails_helper"
 
 
 feature "user can add theater" do
-  scenario "user adds new theater successfully" do
+  scenario "authenitcated user adds new theater successfully" do
+    user = FactoryGirl.create(:user, role: 'member')
+    visit root_path
+    click_link "Sign In"
+    fill_in "Email", with: user.email
+    fill_in "Password", with: user.password
+    click_button "Sign In"
 
-    visit new_theater_path
-    expect(page).to have_content "New Theater Form"
+    click_link "Add New Theater"
 
     fill_in 'Name', with: "Movieeees"
     fill_in 'Address', with: "105 Beach St"
@@ -28,7 +33,14 @@ feature "user can add theater" do
     expect(page).to have_content "17254"
   end
 
-  scenario "visitor does not provide proper information for a theater" do
+  scenario "authenticated visitor does not provide proper information for a theater" do
+    user = FactoryGirl.create(:user, role: 'member')
+    visit root_path
+    click_link "Sign In"
+    fill_in "Email", with: user.email
+    fill_in "Password", with: user.password
+    click_button "Sign In"
+
     visit new_theater_path
 
     click_button "Add Theater"

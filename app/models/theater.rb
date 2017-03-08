@@ -4,4 +4,6 @@ class Theater < ApplicationRecord
   validates :city, presence:true
   validates :state, presence:true
   validates :zip, presence:true, numericality: { only_integer:true }, length: { is: 5 }
+
+  belongs_to :user
 end

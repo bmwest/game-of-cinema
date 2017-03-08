@@ -1,4 +1,5 @@
 class TheatersController < ApplicationController
+  before_action :authorize_user, except: [:index, :show]
 
   def index
     @theaters = Theater.all
@@ -6,6 +7,7 @@ class TheatersController < ApplicationController
 
   def show
     @theater = Theater.find(params[:id])
+    @user = @theater.user
   end
 
   def new
@@ -18,6 +20,9 @@ class TheatersController < ApplicationController
 
   def create
     @theater = Theater.new(theater_params)
+
+    @theater.user = current_user
+
     if @theater.save
       flash[:notice] = "Theater added successfully"
       redirect_to theater_path(@theater)
@@ -48,4 +53,10 @@ class TheatersController < ApplicationController
     params.require(:theater).permit(:name, :address, :city, :state, :zip)
   end
 
+  def authorize_user
+   if !user_signed_in? || current_user.admin?
+    flash[:notice] = "Please log in to use this feature"
+    redirect_to new_user_session_path
+   end
+  end
 end
