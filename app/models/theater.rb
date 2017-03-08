@@ -6,4 +6,5 @@ class Theater < ApplicationRecord
   validates :zip, presence:true, numericality: { only_integer:true }, length: { is: 5 }
 
   belongs_to :user
+  has_many :reviews
 end

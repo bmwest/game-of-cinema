@@ -7,3 +7,14 @@
 <% end %>
 
 <p>Reviews</p>
+  <% @reviews.each do |review| %>
+
+  <p><%= review.user.first_name %></p>
+  <p><%= review.body %> </p>
+
+  <% if review.user == current_user %>
+    <%= link_to 'Delete Review', theater_review_path(@theater,review), method: :delete%>
+  <% end %>
+
+<% end %>
+<%= render 'review_form', theater: @theater, review: @review %>
