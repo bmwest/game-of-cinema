@@ -8,6 +8,8 @@ class TheatersController < ApplicationController
   def show
     @theater = Theater.find(params[:id])
     @user = @theater.user
+    @reviews = @theater.reviews
+    @review = Review.new
   end
 
   def new

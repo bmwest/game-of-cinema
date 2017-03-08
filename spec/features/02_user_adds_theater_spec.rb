@@ -1,19 +1,10 @@
 require "rails_helper"
 
-# [] A restaurant must have a name, address, city, state, and zip code. It can optionally have a description.
-# [] Visiting the `/restaurants/new` path should display a form for creating a new restaurant.
-# [] When adding a new restaurant, if I fill out the form correctly, I should see the page for the newly created restaurant.
-# [] When adding a new restaurant, if I fill out the form incorrectly and submit the form, I should see the form and be displayed the validation errors.
-
-
 feature "user can add theater" do
+  let!(:user) { FactoryGirl.create(:user, role: 'member') }
+
   scenario "authenitcated user adds new theater successfully" do
-    user = FactoryGirl.create(:user, role: 'member')
-    visit root_path
-    click_link "Sign In"
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    click_button "Sign In"
+    sign_in(user)
 
     click_link "Add New Theater"
 
