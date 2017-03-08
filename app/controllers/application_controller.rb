@@ -16,5 +16,4 @@ class ApplicationController < ActionController::Base
      redirect_to root_path, notice: "Youre not an admin, pal"
    end
  end
-
 end

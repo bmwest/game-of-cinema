@@ -1,22 +1,27 @@
 require 'rails_helper'
 
 feature 'admin sees all users' do
-  let!(:user) { User.create(
-    first_name: 'Elmo',
-    last_name: 'World',
-    email: 'sesamestreet@world.com',
-    password: 'supersecret',
-    password_confirmation: 'supersecret',
-    role: 'member'
-  )}
-  let!(:admin) { User.create(
-    first_name: 'Admin',
-    last_name: 'World',
-    email: 'whatatreet@world.com',
-    password: 'supersecret',
-    password_confirmation: 'supersecret',
-    role: 'admin'
-  )}
+  let!(:user) do
+    User.create(
+      first_name: 'Elmo',
+      last_name: 'World',
+      email: 'sesamestreet@world.com',
+      password: 'supersecret',
+      password_confirmation: 'supersecret',
+      role: 'member'
+    )
+  end
+
+  let!(:admin) do
+    User.create(
+      first_name: 'Admin',
+      last_name: 'World',
+      email: 'whatatreet@world.com',
+      password: 'supersecret',
+      password_confirmation: 'supersecret',
+      role: 'admin'
+    )
+  end
 
   scenario "admin visits user index page through link" do
     visit root_path
