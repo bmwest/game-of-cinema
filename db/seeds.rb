@@ -26,9 +26,8 @@ User.create(first_name: "Ghost",
               password: Faker::Internet.password)
 end
 
-
 15.times do
-  theater = Theater.create(name: Faker::Company.name,
+  Theater.create(name: Faker::Company.name,
                 address: Faker::Address.street_address,
                 city: Faker::Address.city,
                 state: Faker::Address.state,
