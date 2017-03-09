@@ -14,7 +14,7 @@ FactoryGirl.define do
     password "superpowers"
     password_confirmation "superpowers"
   end
-  
+
   factory :theater do
     sequence(:name) { |n| "Cinema#{n}" }
     address '123 Street'
