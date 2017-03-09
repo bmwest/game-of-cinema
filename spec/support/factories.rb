@@ -7,6 +7,14 @@ FactoryGirl.define do
     password_confirmation "password"
   end
 
+  factory :admin do
+    sequence(:email) { |n| "admin#{n}@exmple.com" }
+    first_name 'Admin'
+    last_name 'Superpowers'
+    password "superpowers"
+    password_confirmation "superpowers"
+  end
+
   factory :theater do
     sequence(:name) { |n| "Cinema#{n}" }
     address '123 Street'
