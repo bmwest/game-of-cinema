@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :theaters
 
   namespace :admin do
-    resources :users, only: [:index]
+    resources :users, only: [:index, :destroy]
   end
 
 end

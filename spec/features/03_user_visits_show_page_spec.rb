@@ -21,7 +21,7 @@ feature "visitor sees information for a specific theater" do
     expect(page).to have_content amc.state
     expect(page).to have_content amc.zip
 
-    expect(page).to have_link "Delete Theater"
+    expect(page).to have_link "Remove #{amc.name}"
     expect(page).to have_link "Edit"
   end
 
@@ -60,7 +60,7 @@ feature "visitor sees information for a specific theater" do
     amc = Theater.create(name: 'AMC', address: '33 Harrison Ave', city: 'Phildelphia', state: 'PA', zip: '19177', user: user)
 
     visit theater_path(amc)
-    click_link "Delete Theater"
+    click_link "Remove #{amc.name}"
 
     expect(page).to_not have_content "AMC"
   end
@@ -74,6 +74,6 @@ feature "visitor sees information for a specific theater" do
 
     visit theater_path(amc)
     expect(page).to_not have_content("Edit")
-    expect(page).to_not have_content("Delete Theater")
+    expect(page).to_not have_content("Remove #{amc.name}")
   end
 end
