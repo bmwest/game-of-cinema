@@ -13,14 +13,27 @@ class ReviewsController < ApplicationController
       redirect_to theater_path(@theater)
     else
       flash[:notice] = @review.errors.full_messages
-      @user = @theater.user
+      @creator = @theater.user
       @reviews = @theater.reviews
       @review = Review.new
       render "theaters/show"
     end
   end
 
+  def edit
+    @theater = Theater.find(params[:theater_id])
+    @review = Review.find(params[:id])
+  end
+
   def update
+    @theater = Theater.find(params[:theater_id])
+    @review = Review.find(params[:id])
+
+    if @review.update(review_params)
+      redirect_to @theater, notice: 'Review was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
