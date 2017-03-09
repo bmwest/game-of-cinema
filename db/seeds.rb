@@ -28,9 +28,9 @@ end
 
 15.times do
   Theater.create(name: Faker::Company.name,
-                address: Faker::Address.street_address,
-                city: Faker::Address.city,
-                state: Faker::Address.state,
-                zip: "90210",
-                user: User.all.sample)
+                 address: Faker::Address.street_address,
+                 city: Faker::Address.city,
+                 state: Faker::Address.state,
+                 zip: "90210",
+                 user: User.all.sample)
 end
