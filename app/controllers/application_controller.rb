@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
  def authenticate_admin!
    unless user_signed_in? && current_user.admin?
-     redirect_to root_path, notice: "Youre not an admin, pal"
+     redirect_to root_path, notice: "You're not an admin, pal"
    end
  end
 end
