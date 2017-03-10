@@ -55,6 +55,26 @@ feature "user can review a theater" do
     expect(page).to have_content("Be the first to review this theater!")
   end
 
+  scenario "Review owner can edit review" do
+    Review.create(rating:3, body:"hello", theater: theater, user: user1)
+    sign_in(user1)
+    visit theater_path(theater)
+
+    click_link "Edit Review"
+
+    choose("review_rating_2")
+    fill_in 'New Review', with: "this is a different review"
+    click_button "Add Review"
+
+    expect(page).to_not have_content("hello")
+    expect(page).to have_content("this is a different review")
+
+    expect(page).to_not have_content("3/5")
+    expect(page).to have_content("2/5")
+
+    expect(page).to have_content("Review was successfully updated")
+  end
+
   scenario "authenitcated user cannot delete or edit anothers review" do
     Review.create(rating: 1, body: "this is a review", user: user1, theater: theater)
     sign_in(user2)

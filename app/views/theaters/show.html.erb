@@ -18,20 +18,19 @@
 
 <p>Reviews</p>
   <% @reviews.each do |review| %>
+    <p><%= review.user.first_name %></p>
+    <p><%= review.rating %>/5 </p>
 
-  <p><%= review.user.first_name %></p>
-  <p><%= review.rating %> </p>
+    <%= pluralize(review.votes.where(value: "upvote").count, "upvote") %>
+    <%= button_to 'Upvote', review_votes_path(review), params: {value: "upvote"} %>
 
-  <%= pluralize(review.votes.where(value: "upvote").count, "upvote") %>
-  <%= button_to 'Upvote', review_votes_path(review), params: {value: "upvote"} %>
+    <%= pluralize(review.votes.where(value: "downvote").count, "downvote") %>
+    <%= button_to 'Downvote', review_votes_path(review), params: {value: "downvote"} %>
+    <p><%= review.body %> </p>
 
-  <%= pluralize(review.votes.where(value: "downvote").count, "downvote") %>
-  <%= button_to 'Downvote', review_votes_path(review), params: {value: "downvote"} %>
-  <p><%= review.body %> </p>
-
-  <% if review.user == current_user %>
-    <%= link_to 'Edit', edit_theater_review_path(@theater,review) %>
-    <%= link_to 'Delete Review', theater_review_path(@theater,review), method: :delete%>
-  <% end %>
+    <% if review.user == current_user %>
+      <%= link_to 'Edit Review', edit_theater_review_path(@theater,review) %>
+      <%= link_to 'Delete Review', theater_review_path(@theater,review), method: :delete%>
+    <% end %>
 <% end %>
 <%= render "reviews/review_form", theater: @theater, review: @review %>
