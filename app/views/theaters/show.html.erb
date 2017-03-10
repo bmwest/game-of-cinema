@@ -1,9 +1,9 @@
 <h1><%=@theater.name%> </h1>
 <p><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
 
-<% if @user == current_user %>
-  <%= link_to 'Edit', edit_theater_path(@theater) %> |
-  <%= link_to 'Delete Theater', @theater, method: :delete%>
+<% if @user == current_user || (current_user && current_user.admin?) %>
+  <%= link_to "Edit", edit_theater_path(@theater) %> |
+  <%= link_to "Remove #{@theater.name}", @theater, method: :delete%>
 <% end %>
 
 <p>Reviews</p>
