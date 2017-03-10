@@ -2,7 +2,12 @@ class TheatersController < ApplicationController
   before_action :authorize_user, except: [:index, :show]
 
   def index
-    @theaters = Theater.all
+    if params[:search]
+      @theaters = Theater.search(params[:search].capitalize)
+      @users = User.search(params[:search].capitalize)
+    else
+      @theaters = Theater.all
+    end
   end
 
   def show

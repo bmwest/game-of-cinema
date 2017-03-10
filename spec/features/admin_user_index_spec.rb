@@ -12,6 +12,17 @@ feature 'admin sees all users' do
     )
   end
 
+  let!(:user2) do
+    User.create(
+      first_name: 'Seabiscuit',
+      last_name: 'McGougle',
+      email: 'warhorse@farmstand.com',
+      password: 'hayisforhorses',
+      password_confirmation: 'hayisforhorses',
+      role: 'member'
+    )
+  end
+
   let!(:admin) do
     User.create(
       first_name: 'Admin',
@@ -61,8 +72,6 @@ feature 'admin sees all users' do
 
     expect(page).to_not have_link("All Users")
 
-    visit admin_users_path
-
-    expect(page).to_not have_content user.first_name
+    expect(page).to_not have_content user2.first_name
   end
 end
