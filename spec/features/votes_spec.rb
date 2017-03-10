@@ -4,7 +4,7 @@ feature "user votes on a review" do
   let!(:user1) { FactoryGirl.create(:user, role: 'member') }
   let!(:user2) { FactoryGirl.create(:user, role: 'member') }
   let!(:theater) { FactoryGirl.create(:theater, user: user1) }
-  let!(:review) { Review.create(body: "this is a review", user: user1, theater: theater) }
+  let!(:review) { Review.create(rating: 4, body: "this is a review", user: user1, theater: theater) }
 
   scenario "authenitcated user can vote on a review" do
     sign_in(user1)

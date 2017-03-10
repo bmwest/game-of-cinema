@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  validates :body, presence: true
+  validates :rating, presence: true
   validates :user_id, presence: true
   validates :theater_id, presence: true
 

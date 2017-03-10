@@ -12,6 +12,19 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :rating, "1" %>
+    <%= f.radio_button(:rating, 1) %>
+    <%= f.label :rating, "2" %>
+    <%= f.radio_button(:rating, 2) %>
+    <%= f.label :rating, "3" %>
+    <%= f.radio_button(:rating, 3) %>
+    <%= f.label :rating, "4" %>
+    <%= f.radio_button(:rating, 4) %>
+    <%= f.label :rating, "5" %>
+    <%= f.radio_button(:rating, 5) %>
+  </div>
+
+  <div class="field">
     <%=f.label :body, "New Review" %>
     <%=f.text_field :body %><br>
   </div>
