@@ -14,7 +14,7 @@ feature "visitor sees information for a specific theater" do
     expect(page).to have_content theater.state
     expect(page).to have_content theater.zip
 
-    expect(page).to have_link "Delete Theater"
+    expect(page).to have_link "Remove #{theater.name}"
     expect(page).to have_link "Edit"
   end
 
@@ -38,7 +38,7 @@ feature "visitor sees information for a specific theater" do
   scenario "clicks delete link and record is removed" do
     sign_in(user)
     visit theater_path(theater)
-    click_link "Delete Theater"
+    click_link "Remove #{theater.name}"
 
     expect(page).to_not have_content theater.name
   end
@@ -48,6 +48,6 @@ feature "visitor sees information for a specific theater" do
     click_link(theater.name)
 
     expect(page).to_not have_content("Edit")
-    expect(page).to_not have_content("Delete Theater")
+    expect(page).to_not have_content("Remove #{theater.name}")
   end
 end

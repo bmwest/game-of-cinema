@@ -5,4 +5,5 @@ class Review < ApplicationRecord
 
   belongs_to :user
   belongs_to :theater
+  has_many :votes
 end

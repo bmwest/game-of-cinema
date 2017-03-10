@@ -26,11 +26,7 @@ feature "user can add theater" do
 
   scenario "authenticated visitor does not provide proper information for a theater" do
     user = FactoryGirl.create(:user, role: 'member')
-    visit root_path
-    click_link "Sign In"
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    click_button "Sign In"
+    sign_in(user)
 
     visit new_theater_path
 
