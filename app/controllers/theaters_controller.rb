@@ -4,7 +4,6 @@ class TheatersController < ApplicationController
   def index
     if params[:search]
       @theaters = Theater.search(params[:search].capitalize)
-      @users = User.search(params[:search].capitalize)
     else
       @theaters = Theater.all
     end
