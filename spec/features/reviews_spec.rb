@@ -10,12 +10,15 @@ feature "user can review a theater" do
     visit theater_path(theater)
 
     expect(page).to have_content("New Review")
+    expect(page).to have_content("Be the first to review this theater!")
 
+    choose("review_rating_1")
     fill_in 'New Review', with: "this is a review"
     click_button "Add Review"
 
     expect(page).to have_content(user1.first_name)
     expect(page).to have_content("this is a review")
+    expect(page).to have_content("RATING : 1.0 / 5.0")
   end
 
   scenario "authenitcated user submits invalid review" do
@@ -43,15 +46,17 @@ feature "user can review a theater" do
     sign_in(user1)
     visit theater_path(theater)
 
+    choose("review_rating_1")
     fill_in 'New Review', with: "this is a review"
     click_button "Add Review"
     click_link "Delete Review"
 
     expect(page).to_not have_content("this is a review")
+    expect(page).to have_content("Be the first to review this theater!")
   end
 
   scenario "authenitcated user cannot delete or edit anothers review" do
-    Review.create(body: "this is a review", user: user1, theater: theater)
+    Review.create(rating: 1, body: "this is a review", user: user1, theater: theater)
     sign_in(user2)
     visit theater_path(theater)
 
@@ -64,5 +69,20 @@ feature "user can review a theater" do
 
     expect(page).to_not have_content("Edit")
     expect(page).to_not have_content("Delete Review")
+  end
+
+  scenario "mulitple authenitcated users review a theater and theater rating is adjusted" do
+    Review.create(rating: 1, body: "this is a review", user: user1, theater: theater)
+    sign_in(user2)
+    visit theater_path(theater)
+
+    expect(page).to_not have_content("Be the first to review this theater!")
+    expect(page).to have_content("RATING : 1.0 / 5.0")
+
+    choose("review_rating_2")
+    fill_in 'New Review', with: "second review"
+    click_button "Add Review"
+
+    expect(page).to have_content("RATING : 1.5 / 5.0")
   end
 end

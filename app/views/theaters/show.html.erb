@@ -1,6 +1,16 @@
 <h1><%=@theater.name%> </h1>
 <p><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
 
+<% @theater.reviews.each do |review| %>
+  <% @rating_start += review.rating %>
+<% end %>
+
+<% if @rating_start == 0 %>
+  <h1>Be the first to review this theater!</h1>
+<% else %>
+  <h1>RATING : <%= (@rating_start / @theater.reviews.count.to_f).round(1) %> / 5.0 </h1>
+<% end %>
+
 <% if @user == current_user %>
   <%= link_to 'Edit', edit_theater_path(@theater) %> |
   <%= link_to 'Delete Theater', @theater, method: :delete%>
@@ -10,6 +20,7 @@
   <% @reviews.each do |review| %>
 
   <p><%= review.user.first_name %></p>
+  <p><%= review.rating %> </p>
   <p><%= review.body %> </p>
 
   <% if review.user == current_user %>

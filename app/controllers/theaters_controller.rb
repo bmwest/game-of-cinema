@@ -10,6 +10,7 @@ class TheatersController < ApplicationController
     @user = @theater.user
     @reviews = @theater.reviews
     @review = Review.new
+    @rating_start = 0
   end
 
   def new
