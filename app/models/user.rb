@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def admin?
     role == "admin"
   end
+
+  def self.search(search)
+    where("first_name LIKE ? OR last_name LIKE ?", "%#{search}%", "%#{search}%")
+  end
 end
