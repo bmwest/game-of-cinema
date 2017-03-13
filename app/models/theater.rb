@@ -7,4 +7,8 @@ class Theater < ApplicationRecord
 
   belongs_to :user
   has_many :reviews
+
+  def self.search(search)
+    where("name LIKE ? OR state LIKE ? OR city LIKE ? OR zip LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+  end
 end

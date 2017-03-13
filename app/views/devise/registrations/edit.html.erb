@@ -1,6 +1,6 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :multipart => true }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
@@ -31,10 +31,22 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
+  <% if current_user.avatar.url.present? %><br> <br>
+    <%= image_tag(current_user.avatar.url) %>
+    <%= f.label :remove_avatar %>
+      <%= f.check_box :remove_avatar %><br>
+
+  <% end %>
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache%>
+
+  <br> <div class="actions"><br>
     <%= f.submit "Update" %>
   </div>
+
 <% end %>
+
+
 
 <h3>Cancel my account</h3>
 
