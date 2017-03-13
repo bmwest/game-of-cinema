@@ -6,6 +6,6 @@ import TheaterList from './components/TheaterList.js';
 $(function() {
   ReactDOM.render(
     <TheaterList />,
-    document.getElementById('theater-list')
+    document.getElementById('theater-list');
   );
 });
