@@ -5,7 +5,6 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
@@ -26,7 +25,7 @@
         <%= link_to "Sign Up", new_user_registration_path %>
         <%= link_to "Add New Theater", new_theater_path %>
       <%end%>
-      <%= form_tag theaters_path, :method => "get", id: "search-from" do %>
+      <%= form_tag search_index_path, :method => "get", id: "search-from" do %>
         <p>
           <%= label_tag :search %>
           <%= text_field_tag :search, params[:search], placeholder: "search by: name, city, state, or zip", :required => true %>
@@ -39,5 +38,6 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
 
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
