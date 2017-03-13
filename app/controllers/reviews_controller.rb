@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
 
     if @review.save
       flash[:notice] = "Review added successfully"
+      ReviewMailer.new_review(@review).deliver
       redirect_to theater_path(@theater)
     else
       flash[:notice] = @review.errors.full_messages

@@ -19,6 +19,7 @@ feature "user can review a theater" do
     expect(page).to have_content(user1.first_name)
     expect(page).to have_content("this is a review")
     expect(page).to have_content("RATING : 1.0 / 5.0")
+    expect(ActionMailer::Base.deliveries.count).to eq(1)
   end
 
   scenario "authenitcated user submits invalid review" do
