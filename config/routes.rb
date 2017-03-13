@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :theaters do
-    resources :reviews, only: [:create, :new, :destroy, :update, :edit] do
-    end
+    resources :reviews, only: [:create, :new, :destroy, :update, :edit]
   end
 
   resources :reviews, only: [] do
