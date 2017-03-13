@@ -1,5 +1,4 @@
 class SearchController < ApplicationController
-
   def index
     @theaters = Theater.all
 
