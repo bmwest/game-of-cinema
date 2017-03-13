@@ -11,9 +11,10 @@ class TheatersController < ApplicationController
 
   def show
     @theater = Theater.find(params[:id])
-    @user = @theater.user
+    @creator = @theater.user
     @reviews = @theater.reviews
     @review = Review.new
+    @rating_start = 0
   end
 
   def new
@@ -21,7 +22,7 @@ class TheatersController < ApplicationController
   end
 
   def edit
-    @theater = @theater = Theater.find(params[:id])
+    @theater = Theater.find(params[:id])
   end
 
   def create
@@ -39,7 +40,7 @@ class TheatersController < ApplicationController
   end
 
   def update
-    @theater = @theater = Theater.find(params[:id])
+    @theater = Theater.find(params[:id])
     if @theater.update(theater_params)
       redirect_to @theater, notice: 'Theater was successfully updated.'
     else
