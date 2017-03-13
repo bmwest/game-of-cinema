@@ -3,39 +3,50 @@
   <head>
     <title>GameOfCinema</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel= "stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css" />
+    <link rel="stylesheet" href="/assets/stylesheets/homepage.css">
+
   </head>
 
   <body>
-    <nav>
-      <%= link_to "All Theaters", theaters_path %>
-      <% if current_user && current_user.admin? == true %>
-        <%= link_to "All Users", admin_users_path %>
-      <% end %>
-      <%- if user_signed_in? %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-        <%= link_to "Add New Theater", new_theater_path %>
-        <p><%= current_user.first_name %> </p>
-        <%= link_to "User Profile", edit_user_registration_path %>
-      <%- else -%>
-        <%= link_to "Sign In", new_user_session_path %>
-        <%= link_to "Sign Up", new_user_registration_path %>
-        <%= link_to "Add New Theater", new_theater_path %>
-      <%end%>
-      <%= form_tag theaters_path, :method => "get", id: "search-from" do %>
-        <p>
-          <%= label_tag :search %>
-          <%= text_field_tag :search, params[:search], placeholder: "search by: name, city, state, or zip", :required => true %>
-          <%= submit_tag "Search", :name => nil %>
-        </p>
-      <% end %>
-    </nav>
+    <header class="header">
+      <h1 class="headline">House of Cinema <small>by Jamie Lanister</small></h1>
+      <ul class="header-subnav">
+        <nav>
+        <%= link_to "All Theaters", theaters_path, class:"button" %>
 
+        <% if current_user && current_user.admin? == true %>
+        <%= link_to "All Users", admin_users_path, class:"button" %>
+        <% end %>
+
+        <%- if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"button" %>
+        <%= link_to "Add New Theater", new_theater_path, class:"button" %>
+        <%- else -%>
+
+        <%= link_to "Sign In", new_user_session_path, class:"button" %>
+        <%= link_to "Sign Up", new_user_registration_path, class:"button" %>
+        <%= link_to "Add New Theater", new_theater_path, class:"button" %>
+        <%end%>
+
+
+        <%= form_tag theaters_path, :method => "get", id: "search-from" do %>
+          <p>
+            <div class="searchbar">
+            <!-- <%= label_tag :search %> -->
+            <%= text_field_tag :search, params[:search], placeholder: "search by: name, city, state, or zip", :required => true %>
+          </div>
+            <div class="searchbutton">
+            <%= submit_tag "Search", :name => nil, class:"button" %>
+        </div>
+        <% end %>
+        </nav>
+      </ul>
+    </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-
   </body>
 </html>
