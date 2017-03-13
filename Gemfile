@@ -8,7 +8,6 @@ end
 
 gem 'rails', '~> 5.0.2'
 gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -18,6 +17,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'faker'
 gem 'figaro'
 gem 'fog'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -28,7 +28,6 @@ group :development, :test do
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
-  gem 'devise'
   gem "dotenv-rails"
 end
 
@@ -41,4 +40,9 @@ end
 
 group :test do
   gem 'coveralls', require: false
+end
+
+group :production do
+  gem 'puma', '~> 3.0'
+  gem "rails_12factor"
 end
