@@ -8,7 +8,6 @@ end
 
 gem 'rails', '~> 5.0.2'
 gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -41,4 +40,9 @@ end
 
 group :test do
   gem 'coveralls', require: false
+end
+
+group :production do
+  gem 'puma', '~> 3.0'
+  gem "rails_12factor"
 end
