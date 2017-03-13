@@ -1,8 +1,11 @@
 class User < ApplicationRecord
-
   mount_uploader :avatar, AvatarUploader
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :trackable,
+         :validatable
 
   validates :first_name, presence:true
   validates :last_name, presence:true
