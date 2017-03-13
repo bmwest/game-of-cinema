@@ -20,12 +20,12 @@
   <% @reviews.each do |review| %>
     <p><%= review.user.first_name %></p>
     <p><%= review.rating %>/5 </p>
+    <%= Review.find(review.id).votes.where(value:"upvote").count %>
+    <%= Review.find(review.id).votes.where(value:"downvote").count %>
+    <%= link_to "Upvote" %>
+    <%= link_to "DownVote"%>
+    <p id='voting-number' class="total-votes-<%= review.id %>"></p>
 
-    <%= pluralize(review.votes.where(value: "upvote").count, "upvote") %>
-    <%= button_to 'Upvote', review_votes_path(review), params: {value: "upvote"} %>
-
-    <%= pluralize(review.votes.where(value: "downvote").count, "downvote") %>
-    <%= button_to 'Downvote', review_votes_path(review), params: {value: "downvote"} %>
     <p><%= review.body %> </p>
 
     <% if review.user == current_user %>

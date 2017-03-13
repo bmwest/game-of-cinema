@@ -3,15 +3,16 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :theaters do
-    resources :reviews, only: [:create, :new, :destroy, :update, :edit] do
-    end
-  end
-
-  resources :reviews, only: [] do
-    resources :votes, only: [:create, :update]
+    resources :reviews, only: [:create, :new, :destroy, :update, :edit]
   end
 
   namespace :admin do
     resources :users, only: [:index, :destroy]
+  end
+
+  namespace :api do
+    namespace :v1 do
+      resources :theaters, only: [:index]
+    end
   end
 end

@@ -44,8 +44,7 @@ feature "visitor sees information for a specific theater" do
   end
 
   scenario "unauthenticated user clicks link and is taken to edit" do
-    visit root_path
-    click_link(theater.name)
+    visit theater_path(theater)
 
     expect(page).to_not have_content("Edit")
     expect(page).to_not have_content("Remove #{theater.name}")
