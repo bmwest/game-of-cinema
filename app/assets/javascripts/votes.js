@@ -25,4 +25,4 @@ $(document).ready(() => {
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   });
-})
+});

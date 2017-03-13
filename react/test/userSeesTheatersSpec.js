@@ -26,7 +26,7 @@ describe('Theaters Index', () => {
         expect(pageText).toMatch('test theater1');
         expect(pageText).toMatch('test theater2');
         done();
-      },0)
-    })
-  })
-})
+      },0);
+    });
+  });
+});
