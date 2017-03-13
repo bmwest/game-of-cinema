@@ -1,0 +1,16 @@
+[
+  {"name":"test theater1",
+    "address":"1 Street",
+    "city":"1 City",
+    "state":"1 State",
+    "zip": 12345,
+    "user_id": 1
+  },
+
+    {"name":"test theater2",
+      "address":"2 Street",
+      "city":"2 City",
+      "state":"2 State",
+      "zip": 12345,
+      "user_id": 1}
+]
