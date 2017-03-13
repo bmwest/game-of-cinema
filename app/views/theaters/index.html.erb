@@ -6,17 +6,9 @@
   <% else %>
     <% @theaters.each do |theater| %>
       <% if theater.user.nil? %>
-        <% theater.user = User.find_by(first_name: "Ghost") %>
+          <% theater.user = User.find_by(first_name: "Ghost") %>
       <% end%>
       <li><%= link_to theater.name, theater_path(theater) %> | added by: <%= theater.user.first_name %></li>
     <% end %>
-    <% @theaters.each do |theater| %>
-      <% if theater.user.nil? %>
-        <% theater.user = User.find_by(first_name: "Ghost") %>
-      <% end%>
-      <%= link_to theater.name, theater_path(theater) %> | added by: <%= theater.user.first_name %>
-    <% end %>
   <% end %>
 </ul>
-
-<br>
