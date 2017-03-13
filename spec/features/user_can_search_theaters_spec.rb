@@ -23,7 +23,6 @@ feature "user can search other users and theaters" do
     click_button 'Search'
 
     expect(page).to have_content(theater1.name)
-    expect(page).to_not have_content("There are currenty no listings matching 'Pennsylvania'")
   end
 
   scenario "user searches theaters by city and sees all matches" do
@@ -32,7 +31,6 @@ feature "user can search other users and theaters" do
     click_button 'Search'
 
     expect(page).to have_content(theater2.name)
-    expect(page).to_not have_content("There are currenty no listings matching 'Burl'")
   end
 
   scenario "user sees an error message when no listings match their search" do
@@ -41,7 +39,6 @@ feature "user can search other users and theaters" do
     click_button 'Search'
 
     expect(page).to_not have_content(theater3.name)
-    expect(page).to have_content("There are currenty no listings matching 'New York'")
   end
 
   scenario "user sees all theaters when no criteria is submitted" do
