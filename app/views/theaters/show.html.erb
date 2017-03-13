@@ -1,20 +1,36 @@
 <h1><%=@theater.name%> </h1>
 <p><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
 
-<% if @user == current_user || (current_user && current_user.admin?) %>
+<% @theater.reviews.each do |review| %>
+  <% @rating_start += review.rating %>
+<% end %>
+
+<% if @rating_start == 0 %>
+  <h1>Be the first to review this theater!</h1>
+<% else %>
+  <h1>RATING : <%= (@rating_start / @theater.reviews.count.to_f).round(1) %> / 5.0 </h1>
+<% end %>
+
+<% if @creator == current_user || (current_user && current_user.admin?) %>
   <%= link_to "Edit", edit_theater_path(@theater) %> |
   <%= link_to "Remove #{@theater.name}", @theater, method: :delete%>
 <% end %>
 
 <p>Reviews</p>
   <% @reviews.each do |review| %>
+    <p><%= review.user.first_name %></p>
+    <p><%= review.rating %>/5 </p>
 
-  <p><%= review.user.first_name %></p>
-  <p><%= review.body %> </p>
+    <%= pluralize(review.votes.where(value: "upvote").count, "upvote") %>
+    <%= button_to 'Upvote', review_votes_path(review), params: {value: "upvote"} %>
 
-  <% if review.user == current_user %>
-    <%= link_to 'Delete Review', theater_review_path(@theater,review), method: :delete%>
-  <% end %>
+    <%= pluralize(review.votes.where(value: "downvote").count, "downvote") %>
+    <%= button_to 'Downvote', review_votes_path(review), params: {value: "downvote"} %>
+    <p><%= review.body %> </p>
 
+    <% if review.user == current_user %>
+      <%= link_to 'Edit Review', edit_theater_review_path(@theater,review) %>
+      <%= link_to 'Delete Review', theater_review_path(@theater,review), method: :delete%>
+    <% end %>
 <% end %>
 <%= render "reviews/review_form", theater: @theater, review: @review %>
