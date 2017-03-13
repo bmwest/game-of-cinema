@@ -25,6 +25,8 @@
         <%- if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"button" %>
         <%= link_to "Add New Theater", new_theater_path, class:"button" %>
+        <%= link_to "User Profile", edit_user_registration_path, class:"button"  %>
+        <%= current_user.first_name%>
         <%- else -%>
 
         <%= link_to "Sign In", new_user_session_path, class:"button" %>
@@ -36,7 +38,7 @@
         <%= form_tag theaters_path, :method => "get", id: "search-from" do %>
           <p>
             <div class="searchbar">
-            <!-- <%= label_tag :search %> -->
+            <%= label_tag :search %>
             <%= text_field_tag :search, params[:search], placeholder: "search by: name, city, state, or zip", :required => true %>
           </div>
             <div class="searchbutton">
