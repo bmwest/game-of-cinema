@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+
   mount_uploader :avatar, AvatarUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -16,5 +17,4 @@ class User < ApplicationRecord
   def admin?
     role == "admin"
   end
-
 end
