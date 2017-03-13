@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :theaters do
     resources :reviews, only: [:create, :new, :destroy, :update, :edit]
   end
-
+  
   namespace :admin do
     resources :users, only: [:index, :destroy]
   end
