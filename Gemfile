@@ -17,6 +17,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'faker'
 gem 'figaro'
 gem 'fog'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -27,7 +28,6 @@ group :development, :test do
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
-  gem 'devise'
   gem "dotenv-rails"
 end
 
