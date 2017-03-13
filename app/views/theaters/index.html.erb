@@ -1,22 +1,23 @@
-<h1> All Theaters </h1>
-
-<ul>
-  <%if @theaters.empty? %>
-    <p> There are currenty no listings matching <b>'<%= "#{params[:search]}" %>'</b></p>
-  <% else %>
-    <% @theaters.each do |theater| %>
-      <% if theater.user.nil? %>
-        <% theater.user = User.find_by(first_name: "Ghost") %>
-      <% end%>
-      <li><%= link_to theater.name, theater_path(theater) %> | added by: <%= theater.user.first_name %></li>
-    <% end %>
-    <% @theaters.each do |theater| %>
-      <% if theater.user.nil? %>
-        <% theater.user = User.find_by(first_name: "Ghost") %>
-      <% end%>
-      <%= link_to theater.name, theater_path(theater) %> | added by: <%= theater.user.first_name %>
-    <% end %>
-  <% end %>
-</ul>
-
-<br>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Theaters</title>
+    <link rel= "stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css" />
+    <link rel="stylesheet" href="/assets/stylesheets/theaterindex.css">
+  </head>
+  <body>
+    <ul>
+      <%if @theaters.empty? %>
+        <p> There are currenty no listings matching <b>'<%= "#{params[:search]}" %>'</b></p>
+      <% else %>
+        <% @theaters.each do |theater| %>
+          <% if theater.user.nil? %>
+            <% theater.user = User.find_by(first_name: "Ghost") %>
+          <% end%>
+          <li><%= link_to theater.name, theater_path(theater) %> | added by: <%= theater.user.first_name %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </body>
+</html>

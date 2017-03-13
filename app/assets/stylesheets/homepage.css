@@ -1,0 +1,12 @@
+.header {
+  text-align: center;
+  background-image:url("https://19807-presscdn-pagely.netdna-ssl.com/wp-content/uploads/271/d8/3e3d9888b076779a68fde8a9cb05ae79.jpg");
+  background-size: contain;
+  padding-top: -1rem;
+  padding-bottom: -1rem; }
+  .header .headline {
+    color: #ffe; }
+
+.searchbar {
+  padding-right: 1.1rem;
+}
