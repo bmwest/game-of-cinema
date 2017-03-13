@@ -19,7 +19,7 @@ FactoryGirl.define do
     sequence(:name) { |n| "Cinema#{n}" }
     address '123 Street'
     city 'Philadelphia'
-    state 'PA'
+    state 'Pennsylvania'
     zip '19123'
   end
 end

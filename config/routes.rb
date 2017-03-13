@@ -15,4 +15,10 @@ Rails.application.routes.draw do
       resources :theaters, only: [:index]
     end
   end
+
+  resources :user do
+    resources :theaters
+  end
+
+  resources :search, only: [:index]
 end
