@@ -8,9 +8,9 @@ class TheaterList extends Component {
       theaters: [],
       currentPage: 1,
       theatersPerPage: 5
-    }
+    };
     this.getData = this.getData.bind(this);
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(event) {
@@ -42,9 +42,9 @@ class TheaterList extends Component {
   }
 
   render() {
-    let indexOfLastTheater = this.state.currentPage * this.state.theatersPerPage
-    let indexOfFirstTheater = indexOfLastTheater - this.state.theatersPerPage
-    let currentTheaters = this.state.theaters.slice(indexOfFirstTheater, indexOfLastTheater)
+    let indexOfLastTheater = this.state.currentPage * this.state.theatersPerPage;
+    let indexOfFirstTheater = indexOfLastTheater - this.state.theatersPerPage;
+    let currentTheaters = this.state.theaters.slice(indexOfFirstTheater, indexOfLastTheater);
 
     let newTheaters = currentTheaters.map((theater, index) => {
       return (
