@@ -9,7 +9,6 @@ RSpec.describe Api::V1::TheatersController, type: :controller do
     it "should return all theaters" do
       get :index
       json = JSON.parse(response.body)
-      binding.pry
       expect(json.length).to eq(2)
       expect(json[0]["name"]).to eq("test theater1")
       expect(json[1]["name"]).to eq("test theater2")

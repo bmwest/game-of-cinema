@@ -52,6 +52,7 @@ class TheaterList extends Component {
           id={theater.id}
           key={index}
           name={theater.name}
+          creator={theater.user.first_name}
         />
       )
     });
