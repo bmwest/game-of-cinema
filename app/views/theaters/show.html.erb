@@ -20,11 +20,12 @@
   <% @reviews.each do |review| %>
     <p><%= review.user.first_name %></p>
     <p><%= review.rating %>/5 </p>
-    <%= Review.find(review.id).votes.where(value:"upvote").count %>
-    <%= Review.find(review.id).votes.where(value:"downvote").count %>
-    <%= link_to "Upvote" %>
-    <%= link_to "DownVote"%>
-    <p id='voting-number' class="total-votes-<%= review.id %>"></p>
+    <%= link_to "upvote", review_votes_path(review, value: "upvote"), id: 'upvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
+    <%= link_to "downvote", review_votes_path(review, value: "downvote"), id: 'downvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
+    <p>Upvotes:</p>
+    <p id="upvotes-<%= review.id %>"><%= review.upvotes %></p>
+    <p>Downvotes:</p>
+    <p id="downvotes-<%= review.id %>"><%= review.downvotes %></p>
 
     <p><%= review.body %> </p>
 
@@ -34,3 +35,4 @@
     <% end %>
 <% end %>
 <%= render "reviews/review_form", theater: @theater, review: @review %>
+<div id='answer'></div>

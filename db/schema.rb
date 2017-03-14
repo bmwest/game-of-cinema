@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20170309201337) do
     t.string  "body"
     t.integer "user_id",    null: false
     t.integer "theater_id", null: false
+    t.integer "upvotes"
+    t.integer "downvotes"
   end
 
   create_table "theaters", force: :cascade do |t|
@@ -53,11 +55,9 @@ ActiveRecord::Schema.define(version: 20170309201337) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer  "review_id"
-    t.integer  "user_id"
-    t.string   "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "review_id"
+    t.integer "user_id"
+    t.string  "value"
   end
 
 end
