@@ -28,7 +28,7 @@ ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.fixture_path = "#{::Rails.root}/spec/support/images/"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -62,4 +62,14 @@ def sign_in(user)
   fill_in "Email", with: user.email
   fill_in "Password", with: user.password
   click_button "Sign In"
+end
+
+def theater_info(theater)
+  click_link "Add New Theater"
+  fill_in 'Name', with: theater.name
+  fill_in 'Address', with: theater.address
+  fill_in 'City', with: theater.city
+  fill_in 'State', with: theater.state
+  fill_in 'Zip', with: theater.zip
+  click_button "+"
 end
