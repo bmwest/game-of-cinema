@@ -1,5 +1,4 @@
 class ReviewMailer < ApplicationMailer
-
   def new_review(review)
     @review = review
     mail(
@@ -11,7 +10,8 @@ class ReviewMailer < ApplicationMailer
   def send_created_theater_email(user)
     @user = user
      mail(
-     :to => @user.email,
-     :subject => 'Thanks for adding a theater to our amazing app' )
+      to: @user.email,
+      subject: 'Thanks for adding a theater to our amazing app'
+     )
   end
 end
