@@ -17,6 +17,13 @@
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <%= link_to "Add New Theater", new_theater_path %>
         <p><%= current_user.first_name %> </p>
+        <p>
+          <% if current_user.avatar.url.present? %>
+          <div class="container" style = "height:100px; width:100px">
+            <%= image_tag(current_user.avatar.url)%>
+          </div>
+          <% end %>
+        </p>
 
         <%= link_to "User Profile", edit_user_registration_path %>
 
