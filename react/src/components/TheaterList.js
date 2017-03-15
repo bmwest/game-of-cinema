@@ -30,7 +30,10 @@ class TheaterList extends Component {
           throw(error);
         }
       })
-      .then(response => response.json())
+      .then(response => {
+        debugger
+        return response.json()
+      })
       .then(body => {
         this.setState({theaters: body});
       })
@@ -47,7 +50,6 @@ class TheaterList extends Component {
     let currentTheaters = this.state.theaters.slice(indexOfFirstTheater, indexOfLastTheater);
 
     let newTheaters = currentTheaters.map((theater, index) => {
-      debugger
       return (
         <TheaterListItem
           id={theater.id}

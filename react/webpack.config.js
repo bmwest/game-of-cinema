@@ -1,6 +1,7 @@
 var config = {
   entry: {
     path: './react/src/main.js',
+
   },
   output: {
     path: './app/assets/javascripts',

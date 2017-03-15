@@ -26,7 +26,10 @@ class ArticleList extends Component {
         throw(error);
       }
   })
-  .then(response => response.json())
+  .then(response => {
+    debugger
+    return response.json()
+  })
   .then(body => {
     this.setState({articles: body.results});
   })
