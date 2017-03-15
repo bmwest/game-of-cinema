@@ -32,6 +32,7 @@ class TheatersController < ApplicationController
 
     if @theater.save
       flash[:notice] = "Theater added successfully"
+      ReviewMailer.send_created_theater_email(@theater.user).deliver
       redirect_to theater_path(@theater)
     else
       flash[:notice] = @theater.errors.full_messages
