@@ -13,8 +13,8 @@ $('#upvote').on('click', function(e) {
     request.done(function(data) {
       $('#upvotes-' + data.review_id ).html("Upvotes: " + data.upvotes);
       $('#downvotes-' + data.review_id ).html("Downvotes: "+ data.downvotes);
-    })
-  })
+    });
+  });
 
 $('#downvote').on('click', function(e) {
    e.preventDefault();
@@ -31,5 +31,5 @@ $('#downvote').on('click', function(e) {
     request.done(function(data) {
       $('#upvotes-' + data.review_id ).html("Upvotes: " + data.upvotes);
       $('#downvotes-' + data.review_id ).html("Downvotes: "+ data.downvotes);
-    })
+    });
   });
