@@ -1,0 +1,80 @@
+body {
+  background-color: #E8ECED;
+
+}
+
+
+.form {
+  background: grey;
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 450px;
+  line-height: 24px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  background-color: white
+}
+
+
+
+.label {
+margin: auto;
+display: block;
+text-align: center;
+font-size: 200%;
+padding: 5px;
+
+}
+
+.button{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  padding: 10px;
+}
+
+.error {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+}
+
+.cancel {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 10px;
+
+}
+
+
+h1 {
+
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+}
