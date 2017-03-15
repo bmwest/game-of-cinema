@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
 gem 'faker'
 gem 'figaro'
 gem 'fog'
