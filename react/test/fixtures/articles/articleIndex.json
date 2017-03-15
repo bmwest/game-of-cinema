@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "section": "Movies",
+      "subsection": "",
+      "title": "‘Kong: Skull Island’ Roars as March Becomes a Tent-Pole Season",
+      "abstract": "With a respectable opening in North America, following the superhero hit “Logan,” “Kong” proved that spring is joining summer and the winter holidays.",
+      "url": "https://www.nytimes.com/2017/03/12/movies/kong-skull-island-roars-as-march-becomes-a-tent-pole-season.html",
+      "byline": "By BROOKS BARNES",
+      "item_type": "Article",
+      "updated_date": "2017-03-12T14:16:53-04:00",
+      "created_date": "2017-03-12T14:16:54-04:00",
+      "published_date": "2017-03-12T14:16:54-04:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Movies",
+        "Kong: Skull Island (Movie)",
+        "A Dog's Purpose (Movie)",
+        "Logan (Movie)"
+      ],
+      "per_facet": [
+        "Jackman, Hugh",
+        "Vogt-Roberts, Jordan"
+      ],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2017/03/13/arts/13BOX-ITEM/13BOX-ITEM-superJumbo.jpg",
+          "format": "superJumbo",
+          "height": 857,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The title character of “Kong: Skull Island,” which took in about $61 million in North America in its opening weekend.",
+          "copyright": "Warner Bros. Pictures"
+        }
+      ],
+      "short_url": "https://nyti.ms/2mzqZU0"
+    }
+  ]
+}

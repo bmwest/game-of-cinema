@@ -4,13 +4,28 @@
     "city":"1 City",
     "state":"1 State",
     "zip": 12345,
-    "user_id": 1
+    "user_id": 1,
+    "user": {
+      "id":6,
+      "email":"adan@kunde.name",
+      "first_name": "Annabel",
+      "last_name":"Mraz",
+      "role":"member"
+    }
   },
 
-    {"name":"test theater2",
-      "address":"2 Street",
-      "city":"2 City",
-      "state":"2 State",
-      "zip": 12345,
-      "user_id": 1}
+  {"name":"test theater2",
+    "address":"2 Street",
+    "city":"2 City",
+    "state":"2 State",
+    "zip": 12345,
+    "user_id": 1,
+    "user": {
+      "id":6,
+      "email":"adan@kunde.name",
+      "first_name": "Annabel",
+      "last_name":"Mraz",
+      "role":"member"
+    }
+  }
 ]

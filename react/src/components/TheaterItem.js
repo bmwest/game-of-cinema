@@ -3,7 +3,7 @@ import React from 'react';
 const TheaterListItem = (props) => {
 
   return(
-    <div className="list-item text-center small-4 columns">
+    <div className="list-item">
       <h4><a href={`http://localhost:3000/theaters/` + props.id}>{props.name}</a> | added by: {props.creator} </h4>
     </div>
   )

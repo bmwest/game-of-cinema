@@ -47,6 +47,7 @@ class TheaterList extends Component {
     let currentTheaters = this.state.theaters.slice(indexOfFirstTheater, indexOfLastTheater);
 
     let newTheaters = currentTheaters.map((theater, index) => {
+      debugger
       return (
         <TheaterListItem
           id={theater.id}
