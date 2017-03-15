@@ -19,6 +19,11 @@
 <p>Reviews</p>
   <% @reviews.each do |review| %>
     <p><%= review.user.first_name %></p>
+    <% if review.user.avatar.url.present? %>
+      <div class="container" style = "height:100px; width:100px">
+          <%= image_tag(review.user.avatar.url)%>
+        </div>
+    <% end %>
     <p><%= review.rating %>/5 </p>
     <%= link_to "upvote", review_votes_path(review, value: "upvote"), id: 'upvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
     <%= link_to "downvote", review_votes_path(review, value: "downvote"), id: 'downvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
