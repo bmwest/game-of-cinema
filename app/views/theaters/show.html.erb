@@ -18,7 +18,7 @@
 
 <p>Reviews</p>
   <% @reviews.each do |review| %>
-    <p><%= review.user %></p>
+    <p><%= review.user.first_name %></p>
     <p><%= review.rating %>/5 </p>
     <%= Review.find(review.id).votes.where(value:"upvote").count %>
     <%= Review.find(review.id).votes.where(value:"downvote").count %>
