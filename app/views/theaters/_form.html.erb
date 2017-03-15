@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="theaterform.css">
   </head>
   <body>
-    <%= form_for(theater) do |f| %>
+    <%= form_for(theater, html: {:multipart => true }) do |f| %>
       <% if theater.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(theater.errors.count, "error") %> prohibited this theater from being saved:</h2>
@@ -24,19 +25,36 @@
       <div class= "form">
         <div class="field">
           <%= f.label :name, class:"label" %>
-          <%=f.text_field :name, class:"input"  %><br>
+          <%= f.text_field :name, class:"input"  %><br>
 
           <%= f.label :address, class:"label" %>
-          <%=f.text_field :address, class:"input"  %><br>
+          <%= f.text_field :address, class:"input"  %><br>
 
           <%= f.label :city, class:"label" %>
-          <%=f.text_field :city, class:"input"  %><br>
+          <%= f.text_field :city, class:"input"  %><br>
 
           <%= f.label :state, class:"label" %>
-          <%=f.text_field :state, class:"input"  %><br>
+          <%= f.text_field :state, class:"input"  %><br>
 
           <%= f.label :zip, class:"label" %>
-          <%=f.text_field :zip, class:"input" %><br>
+          <%= f.text_field :zip, class:"input" %><br>
+
+          <% if theater.image_url %>
+            <%= image_tag(theater.image_url) %> <br />
+            <%= f.hidden_field :image_cache %>
+            <p>
+              <b> <%= f.label :remove_image, "Remove Image" %> </b>
+              <%= f.check_box :remove_image %>
+            </p>
+          <% end %><br />
+
+          <b> <%= f.label :image, "Add Image File:"%> </b><br /><br />
+          <%= f.file_field :image %>
+
+          <p>
+            <b> <%= f.label :remote_image_url, "Or image URL:" %> </b><br /><br />
+            <%= f.text_field :remote_image_url %>
+          </p>
         </div>
         <div class="actions">
           <%= f.submit "Add Theater"%>

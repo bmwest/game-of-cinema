@@ -5,6 +5,9 @@ FactoryGirl.define do
     last_name 'Smith'
     password "password"
     password_confirmation "password"
+    after :create do |t|
+      t.update_column(:avatar, "#{Rails.root}/spec/support/images/photo.png")
+    end
   end
 
   factory :admin do
@@ -21,5 +24,8 @@ FactoryGirl.define do
     city 'Philadelphia'
     state 'Pennsylvania'
     zip '19123'
+    after :create do |t|
+      t.update_column(:image, "#{Rails.root}/spec/support/images/popcorn.jpg")
+    end
   end
 end
