@@ -1,4 +1,6 @@
 <h1><%=@theater.name%> </h1>
+<div class="image_placeholder"></div>
+<%= image_tag "#{@theater.image_url(:thumb)}" %>
 <p><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
 
 <% @theater.reviews.each do |review| %>

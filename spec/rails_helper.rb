@@ -63,3 +63,13 @@ def sign_in(user)
   fill_in "Password", with: user.password
   click_button "Sign In"
 end
+
+def theater_info(theater)
+  click_link "Add New Theater"
+  fill_in 'Name', with: theater.name
+  fill_in 'Address', with: theater.address
+  fill_in 'City', with: theater.city
+  fill_in 'State', with: theater.state
+  fill_in 'Zip', with: theater.zip
+  click_button "+"
+end
