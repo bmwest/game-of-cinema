@@ -26,7 +26,7 @@ feature "visitor sees information for a specific theater" do
 
     fill_in 'State', with: "New Jersey"
     fill_in 'City', with: "Freehold"
-    click_button "+"
+    click_button "Add Theater"
 
     expect(page).to have_content "New Jersey"
     expect(page).to_not have_content theater.state

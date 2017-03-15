@@ -1,0 +1,95 @@
+.label {
+margin: auto;
+display: block;
+text-align: center;
+font-size: 200%;
+padding: 5px;
+
+}
+
+body {
+  background-color: #E8ECED;
+
+}
+.image{
+  margin: auto;
+  padding: 5px;
+}
+.clickon{
+
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 1px;
+
+}
+.form {
+  background: grey;
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 800px;
+  line-height: 24px;
+  border-radius: 10px;
+  border: 1px solid #999;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+h2{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+
+}
+
+
+h3{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+
+}
+
+.button{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  padding: 5px;
+}
+
+
+.cancel {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+
+}
+
+.reviews {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+}
+
+
+.confirmations{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  padding: 5px;
+}

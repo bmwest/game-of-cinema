@@ -1,54 +1,64 @@
-<%= form_for(theater, html: {:multipart => true }) do |f| %>
-  <% if theater.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(theater.errors.count, "error") %> prohibited this theater from being saved:</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add a Theater</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="theaterform.css">
+  </head>
+  <body>
+    <%= form_for(theater, html: {:multipart => true }) do |f| %>
+      <% if theater.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(theater.errors.count, "error") %> prohibited this theater from being saved:</h2>
 
-      <ul>
-      <% theater.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+            <% theater.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class= "form">
+        <div class="field">
+          <%= f.label :name, class:"label" %>
+          <%= f.text_field :name, class:"input"  %><br>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%=f.text_field :name %><br>
+          <%= f.label :address, class:"label" %>
+          <%= f.text_field :address, class:"input"  %><br>
 
-    <%= f.label :address %>
-    <%=f.text_field :address %><br>
+          <%= f.label :city, class:"label" %>
+          <%= f.text_field :city, class:"input"  %><br>
 
-    <%= f.label :city %>
-    <%=f.text_field :city %><br>
+          <%= f.label :state, class:"label" %>
+          <%= f.text_field :state, class:"input"  %><br>
 
-    <%= f.label :state %>
-    <%=f.text_field :state %><br>
+          <%= f.label :zip, class:"label" %>
+          <%=f.text_field :zip, class:"input" %><br>
 
-    <%= f.label :zip %>
-    <%=f.text_field :zip %><br><br />
+          <% if theater.image_url %>
+            <%= image_tag(theater.image_url) %> <br />
+            <%= f.hidden_field :image_cache %>
+            <p>
+              <b> <%= f.label :remove_image, "Remove Image" %> </b>
+              <%= f.check_box :remove_image %>
+            </p>
+          <% end %><br />
+          <b> <%= f.label :image, "Add Image File:"%> </b><br /><br />
+          <%= f.file_field :image %>
 
-    <% if theater.image_url %>
-      <%= image_tag(theater.image_url) %> <br />
-      <%= f.hidden_field :image_cache %>
-      <p>
-        <b> <%= f.label :remove_image, "Remove Image" %> </b>
-        <%= f.check_box :remove_image %>
-      </p>
-    <% end %><br />
+          <p>
+            <b> <%= f.label :remote_image_url, "Or image URL:" %> </b><br /><br />
+            <%= f.text_field :remote_image_url %>
+          </p>
+        </div>
 
-    <b> <%= f.label :image, "Add Image File:"%> </b><br /><br />
-    <%= f.file_field :image %>
-
-    <p>
-      <b> <%= f.label :remote_image_url, "Or image URL:" %> </b><br /><br />
-      <%= f.text_field :remote_image_url %>
-    </p>
-  </div>
-
-  <br />
-
-  <div class="actions">
-    <%= f.submit "+"%>
-  </div><br /><br />
-
-<% end %>
+        <div class="actions">
+          <%= f.submit "Add Theater"%>
+        </div>
+      </div>
+    <% end %>
+  </body>
+</html>
