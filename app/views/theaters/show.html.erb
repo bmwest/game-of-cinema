@@ -19,6 +19,11 @@
 <p>Reviews</p>
   <% @reviews.each do |review| %>
     <p><%= review.user.first_name %></p>
+    <% if review.user.avatar.url.present? %>
+      <div class="container" style = "height:100px; width:100px">
+          <%= image_tag(review.user.avatar.url)%>
+        </div>
+    <% end %>
     <p><%= review.rating %>/5 </p>
     <%= Review.find(review.id).votes.where(value:"upvote").count %>
     <%= Review.find(review.id).votes.where(value:"downvote").count %>

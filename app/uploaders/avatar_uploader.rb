@@ -3,6 +3,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
+
   # Choose what kind of storage to use for this uploader:
   # storage :file
   if Rails.env.test?
@@ -32,8 +33,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
+  # process resize_to_fit: [500, 500]
   # version :thumb do
-  #   process resize_to_fit: [50, 50]
+  #   process :resize_to_fit => [100, 100]
+  #   process :convert => 'jpg'
   # end
 
   # Add a white list of extensions which are allowed to be uploaded.
