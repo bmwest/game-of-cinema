@@ -10,7 +10,7 @@ feature 'add a photo to a theater' do
     visit search_index_path
     visit theater_path(theater)
     visit edit_theater_path(theater)
-    click_button "+"
+    click_button "Add Theater"
 
     expect(page).to have_xpath("//img[contains(@src,'popcorn.jpg')]")
   end
@@ -27,7 +27,7 @@ feature 'add a photo to a theater' do
     visit edit_theater_path(theater)
 
     check "theater_remove_image"
-    click_button "+"
+    click_button "Add Theater"
 
     expect(page).to_not have_xpath("//img[contains(@src,'popcorn.jpg')]")
   end
