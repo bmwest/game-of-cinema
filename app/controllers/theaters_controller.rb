@@ -23,6 +23,7 @@ class TheatersController < ApplicationController
 
   def edit
     @theater = Theater.find(params[:id])
+
   end
 
   def create
@@ -41,6 +42,7 @@ class TheatersController < ApplicationController
 
   def update
     @theater = Theater.find(params[:id])
+
     if @theater.update(theater_params)
       redirect_to @theater, notice: 'Theater was successfully updated.'
     else
@@ -57,7 +59,7 @@ class TheatersController < ApplicationController
   private
 
   def theater_params
-    params.require(:theater).permit(:name, :address, :city, :state, :zip)
+    params.require(:theater).permit(:name, :address, :city, :state, :zip, :image, :remove_image)
   end
 
   def authorize_user
