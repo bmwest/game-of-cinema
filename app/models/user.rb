@@ -7,7 +7,6 @@ class User < ApplicationRecord
 
   has_many :theaters
   has_many :reviews
-  has_many :votes
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 

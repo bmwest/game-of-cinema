@@ -4,8 +4,6 @@ class CreateVotes < ActiveRecord::Migration[5.0]
       t.integer :review_id
       t.integer :user_id
       t.string :value
-
-      t.timestamps
     end
   end
 end

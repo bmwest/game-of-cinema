@@ -5,6 +5,8 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.string :body
       t.integer :user_id, null: false
       t.integer :theater_id, null: false
+      t.integer :upvotes
+      t.integer :downvotes
     end
   end
 end
