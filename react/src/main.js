@@ -6,8 +6,8 @@ import ArticleList from './components/ArticleList.js';
 
 $(function() {
   if (window.location.pathname == "/theaters") {
-    ReactDOM.render(<TheaterList />, document.getElementById('theater-list'))
+    ReactDOM.render(<TheaterList />, document.getElementById('theater-list'));
   } else if (window.location.pathname == "/") {
-    ReactDOM.render( <ArticleList />, document.getElementById('article-list'))
+    ReactDOM.render( <ArticleList />, document.getElementById('article-list'));
   }
 });

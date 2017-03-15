@@ -31,8 +31,7 @@ class TheaterList extends Component {
         }
       })
       .then(response => {
-        debugger
-        return response.json()
+        return response.json();
       })
       .then(body => {
         this.setState({theaters: body});
