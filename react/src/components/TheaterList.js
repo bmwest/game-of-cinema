@@ -30,7 +30,9 @@ class TheaterList extends Component {
           throw(error);
         }
       })
-      .then(response => response.json())
+      .then(response => {
+        return response.json();
+      })
       .then(body => {
         this.setState({theaters: body});
       })
