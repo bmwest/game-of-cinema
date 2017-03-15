@@ -1,41 +1,92 @@
 {
+  "status": "OK",
+  "copyright": "Copyright (c) 2017 The New York Times Company. All Rights Reserved.",
+  "section": "movies",
+  "last_updated": "2017-03-15T11:07:12-04:00",
+  "num_results": 33,
   "results": [
     {
       "section": "Movies",
       "subsection": "",
-      "title": "‘Kong: Skull Island’ Roars as March Becomes a Tent-Pole Season",
-      "abstract": "With a respectable opening in North America, following the superhero hit “Logan,” “Kong” proved that spring is joining summer and the winter holidays.",
-      "url": "https://www.nytimes.com/2017/03/12/movies/kong-skull-island-roars-as-march-becomes-a-tent-pole-season.html",
-      "byline": "By BROOKS BARNES",
+      "title": "The 9 New Directors You Need to Watch",
+      "abstract": "The New Directors/New Film Series opens on Wednesday with the joyful “Patti Cake$,” one of several features by talented but little-known artists.",
+      "url": "https://www.nytimes.com/2017/03/14/movies/the-9-new-directors-you-need-to-watch.html",
+      "byline": "By MANOHLA DARGIS and A.O. SCOTT",
       "item_type": "Article",
-      "updated_date": "2017-03-12T14:16:53-04:00",
-      "created_date": "2017-03-12T14:16:54-04:00",
-      "published_date": "2017-03-12T14:16:54-04:00",
+      "updated_date": "2017-03-14T17:12:57-04:00",
+      "created_date": "2017-03-14T17:12:59-04:00",
+      "published_date": "2017-03-14T17:12:59-04:00",
       "material_type_facet": "",
       "kicker": "",
       "des_facet": [
-        "Movies",
-        "Kong: Skull Island (Movie)",
-        "A Dog's Purpose (Movie)",
-        "Logan (Movie)"
+        "New Directors-New Films (Festival)",
+        "Patti Cake$ (Movie)",
+        "White Sun (Movie)",
+        "Beach Rats (Movie)",
+        "Arabia (Movie)"
+      ],
+      "org_facet": [
+        "Film Society of Lincoln Center"
       ],
       "per_facet": [
-        "Jackman, Hugh",
-        "Vogt-Roberts, Jordan"
+
+      ],
+      "geo_facet": [
+
       ],
       "multimedia": [
         {
-          "url": "https://static01.nyt.com/images/2017/03/13/arts/13BOX-ITEM/13BOX-ITEM-superJumbo.jpg",
+          "url": "https://static01.nyt.com/images/2017/03/15/arts/15NEWDIRECTORS3SUB/15NEWDIRECTORS3SUB-thumbStandard.jpg",
+          "format": "Standard Thumbnail",
+          "height": 75,
+          "width": 75,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Eliza Hittman&rsquo;s &ldquo;Beach Rats&rdquo; is set around Coney Island in Brooklyn.",
+          "copyright": "Neon Rated"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2017/03/15/arts/15NEWDIRECTORS3SUB/15NEWDIRECTORS3SUB-thumbLarge.jpg",
+          "format": "thumbLarge",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Eliza Hittman&rsquo;s &ldquo;Beach Rats&rdquo; is set around Coney Island in Brooklyn.",
+          "copyright": "Neon Rated"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2017/03/15/arts/15NEWDIRECTORS3SUB/15NEWDIRECTORS3SUB-articleInline.jpg",
+          "format": "Normal",
+          "height": 127,
+          "width": 190,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Eliza Hittman&rsquo;s &ldquo;Beach Rats&rdquo; is set around Coney Island in Brooklyn.",
+          "copyright": "Neon Rated"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2017/03/15/arts/15NEWDIRECTORS3SUB/15NEWDIRECTORS3SUB-mediumThreeByTwo210.jpg",
+          "format": "mediumThreeByTwo210",
+          "height": 140,
+          "width": 210,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Eliza Hittman&rsquo;s &ldquo;Beach Rats&rdquo; is set around Coney Island in Brooklyn.",
+          "copyright": "Neon Rated"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2017/03/15/arts/15NEWDIRECTORS3SUB/15NEWDIRECTORS3SUB-superJumbo.jpg",
           "format": "superJumbo",
-          "height": 857,
+          "height": 1364,
           "width": 2048,
           "type": "image",
           "subtype": "photo",
-          "caption": "The title character of “Kong: Skull Island,” which took in about $61 million in North America in its opening weekend.",
-          "copyright": "Warner Bros. Pictures"
+          "caption": "Eliza Hittman&rsquo;s &ldquo;Beach Rats&rdquo; is set around Coney Island in Brooklyn.",
+          "copyright": "Neon Rated"
         }
       ],
-      "short_url": "https://nyti.ms/2mzqZU0"
+      "short_url": "https://nyti.ms/2mGPC15"
     }
   ]
 }

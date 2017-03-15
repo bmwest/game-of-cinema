@@ -5,7 +5,7 @@ describe('Theaters Index', () => {
 
   beforeEach(() => {
     spyOn(global, 'fetch').and.returnValue(
-      createResponseFromFixture('theaters/theatersIndex')
+      createResponseFromFixture('theaters/theatersIndex'),
     );
   });
 
