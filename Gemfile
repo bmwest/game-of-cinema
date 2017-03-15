@@ -29,7 +29,6 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
   gem "dotenv-rails"
-  gem "jasmine"
 end
 
 group :development do
@@ -41,6 +40,8 @@ end
 
 group :test do
   gem 'coveralls', require: false
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :production do
