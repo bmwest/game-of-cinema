@@ -8,11 +8,11 @@ feature "user visits the homepage" do
   let!(:theater4) { FactoryGirl.create(:theater, user: user1) }
   let!(:theater5) { FactoryGirl.create(:theater, user: user1) }
   let!(:theater6) { FactoryGirl.create(:theater, user: user1) }
-  let!(:review1) { Review.create(rating:3, theater: theater1, user: user1) }
-  let!(:review2) { Review.create(rating:3, theater: theater2, user: user1) }
-  let!(:review3) { Review.create(rating:3, theater: theater4, user: user1) }
-  let!(:review4) { Review.create(rating:3, theater: theater5, user: user1) }
-  let!(:review5) { Review.create(rating:3, theater: theater6, user: user1) }
+  let!(:review1) { Review.create(rating: 3, theater: theater1, user: user1) }
+  let!(:review2) { Review.create(rating: 3, theater: theater2, user: user1) }
+  let!(:review3) { Review.create(rating: 3, theater: theater4, user: user1) }
+  let!(:review4) { Review.create(rating: 3, theater: theater5, user: user1) }
+  let!(:review5) { Review.create(rating: 3, theater: theater6, user: user1) }
 
   scenario "user sees theaters with the most reviews" do
     visit root_path
