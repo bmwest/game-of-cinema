@@ -3,7 +3,7 @@ import ArticleListItem from './ArticleItem';
 
 class ArticleList extends Component {
   constructor(props) {
-  super(props)
+  super(props);
     this.state = {
       articles: [],
     };
@@ -27,8 +27,7 @@ class ArticleList extends Component {
       }
   })
   .then(response => {
-    debugger
-    return response.json()
+    return response.json();
   })
   .then(body => {
     this.setState({articles: body.results});
@@ -42,12 +41,12 @@ class ArticleList extends Component {
 
   render() {
     let newArticles = this.state.articles.map((article, index) => {
-      let dateConversion = new Date(article.published_date)
+      let dateConversion = new Date(article.published_date);
       let image_url;
       if (article.multimedia.length > 0) {
-        image_url = article.multimedia[article.multimedia.length - 1].url
+        image_url = article.multimedia[article.multimedia.length - 1].url;
       } else {
-        image_url = '../../app/assets/images/image-not-found.png'
+        image_url = '../../app/assets/images/image-not-found.png';
       }
 
       return (
