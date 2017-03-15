@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+.article-index {
+  overflow-y: scroll;
+  height: 60vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 50vw;
+}
