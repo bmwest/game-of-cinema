@@ -18,7 +18,7 @@
 
 <p>Reviews</p>
   <% @reviews.each do |review| %>
-    <p><%= review.user.first_name %></p>
+    <p><%= review.user %></p>
     <p><%= review.rating %>/5 </p>
 
     <%= pluralize(review.votes.where(value: "upvote").count, "upvote") %>
