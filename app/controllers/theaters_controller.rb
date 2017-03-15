@@ -23,7 +23,6 @@ class TheatersController < ApplicationController
 
   def edit
     @theater = Theater.find(params[:id])
-
   end
 
   def create
