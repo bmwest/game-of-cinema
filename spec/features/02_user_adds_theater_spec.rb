@@ -22,6 +22,7 @@ feature "user can add theater" do
     expect(page).to have_content "Phildelphia"
     expect(page).to have_content "Pennsylvania"
     expect(page).to have_content "17254"
+    expect(ActionMailer::Base.deliveries.count).to eq(1)
   end
 
   scenario "authenticated visitor does not provide proper information for a theater" do
