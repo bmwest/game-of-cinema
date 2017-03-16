@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Theater</title>
-      <link rel="stylesheet" href="show-theater.css">
-  </head>
-  <body>
-    <div class="theater-header">
+<head>
+  <link rel="stylesheet" href="show-theater.css">
+</head>
+
+<div class="theater-header">
   <div class="theater-info">
     <h1><%=@theater.name%> </h1>
     <p><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
@@ -75,5 +71,3 @@
   <%= render "reviews/review_form", theater: @theater, review: @review %>
   <div id='answer'></div>
 </div>
-  </body>
-</html>
