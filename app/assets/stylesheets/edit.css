@@ -1,10 +1,20 @@
-.label {
-margin: auto;
-display: block;
-text-align: center;
-font-size: 200%;
-padding: 5px;
 
+
+.cancel{
+  text-align: center;
+  position: auto;
+}
+
+.avatarupload{
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.profimage{
+  margin: auto;
+  display: block;
+  text-align: center;
 }
 
 body {
@@ -15,15 +25,14 @@ body {
   margin: auto;
   padding: 5px;
 }
-.clickon{
 
+.actions {
   margin: auto;
-  display: block;
+  position: relative;
+  padding: 10px;
   text-align: center;
-  font-size: 200%;
-  padding: 1px;
-
 }
+
 .form {
   background: grey;
   margin: auto;
@@ -50,46 +59,10 @@ h2{
 }
 
 
-h3{
-  margin: auto;
-  display: block;
-  text-align: center;
-  font-size: 200%;
-  padding: 5px;
-
-}
-
-.button{
-  margin: auto;
-  display: block;
-  text-align: center;
-  font-size: 100%;
-  padding: 5px;
-}
-
-
-.cancel {
-  margin: auto;
-  display: block;
-  text-align: center;
-  font-size: 200%;
-  padding: 5px;
-
-}
-
 .reviews {
   margin: auto;
   display: block;
   text-align: center;
   font-size: 200%;
-  padding: 5px;
-}
-
-
-.confirmations{
-  margin: auto;
-  display: block;
-  text-align: center;
-  font-size: 100%;
   padding: 5px;
 }
