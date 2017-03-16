@@ -71,7 +71,10 @@ feature 'admin sees all users' do
     click_button "Sign In"
 
     expect(page).to_not have_link("All Users")
-
     expect(page).to_not have_content user2.first_name
+
+    visit admin_users_path
+    expect(page).to have_current_path(root_path)
+    expect(page).to have_content("You're not an admin, pal")
   end
 end
