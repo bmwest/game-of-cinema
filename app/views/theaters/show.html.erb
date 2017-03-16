@@ -1,7 +1,3 @@
-<head>
-  <link rel="stylesheet" href="show-theater.css">
-</head>
-
 <div class="theater-header">
   <div class="theater-info">
     <h1><%=@theater.name%> </h1>
@@ -37,7 +33,7 @@
   <p class="title">Reviews</p>
     <% @reviews.each do |review| %>
     <div class="theater-reviews">
-      <p><%= review.user.first_name %></p>
+      <p><em><%= review.user.first_name %></em></p>
       <% if review.user.avatar.url.present? %>
         <div class="container" style = "height:100px; width:100px">
             <%= image_tag(review.user.avatar.url)%>
@@ -54,9 +50,9 @@
         </ul>
       </div>
 
-      <span>
-        <%= review.body %>
-      </span>
+      <div class="theater-review-body">
+        <p><%= review.body %></p>
+      </div>
 
       <div class="theater-reviewer">
         <% if review.user == current_user %>
