@@ -30,6 +30,7 @@ feature "user can review a theater" do
 
     expect(page).to have_content("can't be blank")
     expect(page).to_not have_content("this is a review")
+    expect(page).to have_content("New Review")
   end
 
 

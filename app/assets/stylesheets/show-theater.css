@@ -1,0 +1,108 @@
+.theater-header {
+  width: 75%;
+  margin-top: 100px;
+  margin-bottom: 35px;
+  /*margin: auto;*/
+  align-self: center;
+}
+
+.theater-info {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 45%;
+  height: 25%;
+  float: left;
+  margin: auto;
+}
+
+.theater-image img {
+  max-height: 40%;
+  max-width: 40%;
+  float: right;
+}
+
+.theater-info h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 50px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 60px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  /*position: relative;*/
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+.theater-info p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: 60px;
+}
+
+.theater-rating h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  position: relative;
+  line-height: 60px;
+}
+
+.title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 35px;
+  font-weight: 200;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.theater-reviews {
+  margin-bottom: 20px;
+}
+
+.theater-reviews ul {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 10px;
+  list-style: none;
+  display: inline-block;
+  /*border-top: 1px dotted #000;*/
+}
+
+.theater-reviews p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 0px;
+  padding: 10px;
+  border-top: 1px dotted #000;
+}
+span {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+
+.theater-rating-form {
+  padding: 20px;
+  margin: auto;
+}
