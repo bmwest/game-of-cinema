@@ -186,14 +186,6 @@ padding: 5px;
   font-size: 100%;
   padding: 10px;
 }
-.movieLogo {
-  padding: 6px;
-  width: 150px;
-}
-
-.header {
-  background: #EC1361;
-}
 body {
   background-color: #E8ECED;
 
@@ -307,5 +299,52 @@ img {
   padding: 20px;
   width: 70px;
   height: 70px;
+  display: inline
 
+}
+
+.image_placeholder {
+  width: 200px;
+  height: 200px;
+  margin: auto
+}
+
+.headings{
+
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 50px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+.subheadings{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 25px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+
+.reviews {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 15px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+
+.profile_picture{
+  border-radius: 50%;
+}
+
+.movieLogo {
+  padding: 6px;
+  width: 150px;
+}
+
+.header {
+  background: #EC1361;
 }
