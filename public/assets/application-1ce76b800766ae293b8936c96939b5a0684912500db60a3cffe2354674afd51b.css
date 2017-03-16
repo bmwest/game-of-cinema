@@ -1,0 +1,350 @@
+.label {
+margin: auto;
+display: block;
+text-align: center;
+font-size: 200%;
+padding: 5px;
+
+}
+
+body {
+  background-color: #E8ECED;
+
+}
+.image{
+  margin: auto;
+  padding: 5px;
+}
+.clickon{
+
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 1px;
+
+}
+.form {
+  background: grey;
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 800px;
+  line-height: 24px;
+  border-radius: 10px;
+  border: 1px solid #999;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+h2{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+
+}
+
+
+h3{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+
+}
+
+.button{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  padding: 5px;
+}
+
+
+.cancel {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+
+}
+
+.reviews {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+}
+
+
+.confirmations{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  padding: 5px;
+}
+.form {
+  background: grey;
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 700px;
+  line-height: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #999;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+h1 {
+
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+}
+
+.label {
+margin: auto;
+padding: 10px;
+display: block;
+text-align: center;
+font-size: 100%;
+padding: 5px;
+
+}
+
+.button{
+  margin: auto;
+  display: block;
+  text-align: center;
+  padding: 1px;
+}
+
+
+.input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  background-color: white
+}
+
+body {
+  background-color: #E8ECED;
+
+}
+.form {
+  background: grey;
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 450px;
+  line-height: 20px;
+  border-radius: 10px;
+  padding:5px;
+  border: 1px solid #999;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.label {
+margin: auto;
+display: block;
+text-align: center;
+font-size: 200%;
+padding: 5px;
+
+}
+
+.button{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  padding: 10px;
+}
+body {
+  background-color: #E8ECED;
+
+}
+
+
+.form {
+  background: grey;
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 450px;
+  line-height: 24px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  background-color: white
+}
+
+
+
+.label {
+margin: auto;
+display: block;
+text-align: center;
+font-size: 200%;
+padding: 5px;
+
+}
+
+.button{
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  padding: 10px;
+}
+
+.error {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+}
+
+.cancel {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 10px;
+
+}
+
+
+h1 {
+
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 200%;
+  padding: 5px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+.article-index {
+  overflow-y: scroll;
+  height: 60vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 50vw;
+}
+
+.profileLogo {
+  border-radius: 15px 50px;
+  padding: 20px;
+  width: 70px;
+  height: 70px;
+  display: inline
+
+}
+
+.image_placeholder {
+  width: 200px;
+  height: 200px;
+  margin: auto
+}
+
+.headings{
+
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 50px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+.subheadings{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 25px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+
+.reviews {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 15px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+
+.profile_picture{
+  border-radius: 50%;
+}
+
+.movieLogo {
+  padding: 6px;
+  width: 150px;
+}
+
+.header {
+  background: #EC1361;
+}

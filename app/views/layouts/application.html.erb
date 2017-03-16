@@ -28,7 +28,7 @@
      <div class="header">
        <div class="mdl-layout__header-row">
          <span class="android-title mdl-layout-title">
-           <img class="movieLogo" src="http://www.weddingfriends.co.za/wp-content/themes/weddingFriends1/images/cinema.png">
+           <img class="movieLogo" src="https://www.weddingfriends.co.za/wp-content/themes/weddingFriends1/images/cinema.png">
          </span>
          <div class="android-header-spacer mdl-layout-spacer"></div>
 
@@ -51,6 +51,11 @@
 
              <% if user_signed_in? %>
              <%= link_to "Add New Theater", new_theater_path, class:"mdl-navigation__link mdl-typography--text-uppercase" %>
+             <% if current_user.avatar.url.present? %>
+               <div class="profileLogo">
+                   <%= image_tag(current_user.avatar.url) %>
+                </div>
+             <% end %>
              <%= link_to "User Profile", edit_user_registration_path, class:"mdl-navigation__link mdl-typography--text-uppercase" %>
 
              <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"mdl-navigation__link mdl-typography--text-uppercase" %>

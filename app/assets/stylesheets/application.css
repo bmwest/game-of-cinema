@@ -14,15 +14,51 @@
  *= require_self
  */
 
-.article-index {
-  overflow-y: scroll;
-  height: 60vh;
+
+.profileLogo {
+  border-radius: 15px 50px;
+  padding: 20px;
+  width: 70px;
+  height: 70px;
+  display: inline
+
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    width: 50vw;
+.image_placeholder {
+  width: 200px;
+  height: 200px;
+  margin: auto
+}
+
+.headings{
+
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 50px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+.subheadings{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 25px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+
+.reviews {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  	font-size: 15px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+}
+
+.profile_picture{
+  border-radius: 50%;
 }
 
 .movieLogo {
