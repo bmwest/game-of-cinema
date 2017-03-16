@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-  before_action :authorize_user, :set_params
+  before_action :set_params
 
   def create
     @review = Review.find(params[:review_id])
@@ -19,12 +19,9 @@ class VotesController < ApplicationController
       @review.update_attributes(upvotes: Vote.where(review: @review, value: "upvote").count)
       @review.update_attributes(downvotes: Vote.where(review: @review, value: "downvote").count)
       @review.save
-      respond_to do |format|
-        format.json { render json: { upvotes: @review.upvotes, downvotes: @review.downvotes, review_id: @review.id } }
-      end
-    else
-      flash[:error] = 'Something went wrong with your request.'
-      redirect_to :back
+    end
+    respond_to do |format|
+      format.json { render json: { upvotes: @review.upvotes, downvotes: @review.downvotes, review_id: @review.id } }
     end
   end
 
@@ -33,12 +30,5 @@ class VotesController < ApplicationController
   def set_params
     @review = Review.find(params[:review_id])
     @value = params[:value]
-  end
-
-  def authorize_user
-    unless user_signed_in? || (current_user && current_user.admin?)
-      flash[:notice] = "Please log in to use this feature"
-      redirect_to new_user_session_path
-    end
   end
 end
