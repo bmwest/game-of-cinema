@@ -20,7 +20,7 @@ class TheaterList extends Component {
   }
 
   getData() {
-    fetch('http://localhost:3000/api/v1/theaters.json')
+    fetch('https://localhost:3000/api/v1/theaters.json')
       .then(response => {
         if (response.ok) {
           return response;
