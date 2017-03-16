@@ -24,3 +24,12 @@ img {
     height: auto;
     width: 50vw;
 }
+
+.movieLogo {
+  padding: 6px;
+  width: 150px;
+}
+
+.header {
+  background: #EC1361;
+}
