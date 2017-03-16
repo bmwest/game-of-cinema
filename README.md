@@ -15,7 +15,7 @@ Briana West
 Samuel Lauricella
 Evianne Keeney
 
-heroku link:
+Heroku link: https://game-of-cinema.herokuapp.com
 
 * Features:
 
