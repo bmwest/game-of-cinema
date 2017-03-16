@@ -1,16 +1,17 @@
-<h1><%=@theater.name%> </h1>
-<div class="image_placeholder"></div>
-<%= image_tag "#{@theater.image_url(:thumb)}" %>
-<p><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
+<h1 class = "headings"><%=@theater.name%> </h1>
+<p class= "subheadings" style = "margin: auto"><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
+<br>
+<div class="image_placeholder">
+<%= image_tag "#{@theater.image_url(:thumb)}" %></div>
 
 <% @theater.reviews.each do |review| %>
   <% @rating_start += review.rating %>
 <% end %>
 
 <% if @rating_start == 0 %>
-  <h1>Be the first to review this theater!</h1>
+  <h3>Be the first to review this theater!</h3>
 <% else %>
-  <h1>RATING : <%= (@rating_start / @theater.reviews.count.to_f).round(1) %> / 5.0 </h1>
+  <h3>RATING : <%= (@rating_start / @theater.reviews.count.to_f).round(1) %> / 5.0 </h3>
 <% end %>
 
 <% if @creator == current_user || (current_user && current_user.admin?) %>
@@ -18,21 +19,19 @@
   <%= link_to "Remove #{@theater.name}", @theater, method: :delete%>
 <% end %>
 
-<p>Reviews</p>
+<h5 class="reviews">Reviews</h5>
   <% @reviews.each do |review| %>
-    <p><%= review.user.first_name %></p>
-    <% if review.user.avatar.url.present? %>
-      <div class="profileLogo">
-          <%= image_tag(review.user.avatar.url)%>
-        </div>
-    <% end %>
-    <p><%= review.rating %>/5 </p>
+  <% if review.user.avatar.url.present? %>
+  <div class="profileLogo"> <%= image_tag(review.user.avatar.url)%> <%= review.user.first_name %> Rating: <%= review.rating %>/5 <%= review.body %> <div>
+
+  <% end %>
+
     <%= link_to "upvote", review_votes_path(review, value: "upvote"), id: 'upvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
     <%= link_to "downvote", review_votes_path(review, value: "downvote"), id: 'downvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
     <p id="upvotes-<%= review.id %>">Upvotes: <%= review.upvotes %></p>
     <p id="downvotes-<%= review.id %>">Downvotes: <%= review.downvotes %></p>
 
-    <p><%= review.body %> </p>
+
 
     <% if review.user == current_user %>
       <%= link_to 'Edit Review', edit_theater_review_path(@theater,review) %>
