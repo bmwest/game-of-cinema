@@ -40,4 +40,11 @@ feature "user can add theater" do
     expect(page).to have_content "Zip is the wrong length (should be 5 characters)"
     expect(page).to have_content "Zip is not a number"
   end
+
+  scenario "unauthenticated visitor tris to add a user" do
+    visit new_theater_path
+
+    expect(page).to have_current_path(new_user_session_path)
+    expect(page).to have_content("log in to use")
+  end
 end
