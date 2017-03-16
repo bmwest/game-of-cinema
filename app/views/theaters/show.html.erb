@@ -1,42 +1,73 @@
-<h1 class = "headings"><%=@theater.name%> </h1>
-<p class= "subheadings" style = "margin: auto"><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
-<br>
-<div class="image_placeholder">
-<%= image_tag "#{@theater.image_url(:thumb)}" %></div>
+<head>
+  <link rel="stylesheet" href="show-theater.css">
+</head>
 
-<% @theater.reviews.each do |review| %>
-  <% @rating_start += review.rating %>
-<% end %>
+<div class="theater-header">
+  <div class="theater-info">
+    <h1><%=@theater.name%> </h1>
+    <p><%=@theater.address%>, <%=@theater.city%>, <%=@theater.state%> <%=@theater.zip%></p>
+  </div>
 
-<% if @rating_start == 0 %>
-  <h3>Be the first to review this theater!</h3>
-<% else %>
-  <h3>RATING : <%= (@rating_start / @theater.reviews.count.to_f).round(1) %> / 5.0 </h3>
-<% end %>
+  <div class="theater-image">
+    <%= image_tag "#{@theater.image_url(:thumb)}" %>
+  </div>
+</div>
 
-<% if @creator == current_user || (current_user && current_user.admin?) %>
-  <%= link_to "Edit", edit_theater_path(@theater) %> |
-  <%= link_to "Remove #{@theater.name}", @theater, method: :delete%>
-<% end %>
-
-<h5 class="reviews">Reviews</h5>
-  <% @reviews.each do |review| %>
-  <% if review.user.avatar.url.present? %>
-  <div class="profileLogo"> <%= image_tag(review.user.avatar.url)%> <%= review.user.first_name %> Rating: <%= review.rating %>/5 <%= review.body %> <div>
-
+<div class="theater-review-rating">
+  <% @theater.reviews.each do |review| %>
+    <% @rating_start += review.rating %>
   <% end %>
+</div>
 
-    <%= link_to "upvote", review_votes_path(review, value: "upvote"), id: 'upvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
-    <%= link_to "downvote", review_votes_path(review, value: "downvote"), id: 'downvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
-    <p id="upvotes-<%= review.id %>">Upvotes: <%= review.upvotes %></p>
-    <p id="downvotes-<%= review.id %>">Downvotes: <%= review.downvotes %></p>
+<div class="theater-rating">
+  <% if @rating_start == 0 %>
+    <h1>Be the first to review this theater!</h1>
+  <% else %>
+    <h1>RATING : <%= (@rating_start / @theater.reviews.count.to_f).round(1) %> / 5.0 </h1>
+  <% end %>
+</div>
 
+<div class="theater-creator">
+  <% if @creator == current_user || (current_user && current_user.admin?) %>
+    <%= link_to "Edit", edit_theater_path(@theater) %> |
+    <%= link_to "Remove #{@theater.name}", @theater, method: :delete%>
+  <% end %>
+</div>
 
+  <p class="title">Reviews</p>
+    <% @reviews.each do |review| %>
+    <div class="theater-reviews">
+      <p><%= review.user.first_name %></p>
+      <% if review.user.avatar.url.present? %>
+        <div class="container" style = "height:100px; width:100px">
+            <%= image_tag(review.user.avatar.url)%>
+        </div>
+      <% end %>
 
-    <% if review.user == current_user %>
-      <%= link_to 'Edit Review', edit_theater_review_path(@theater,review) %>
-      <%= link_to 'Delete Review', theater_review_path(@theater,review), method: :delete%>
+      <div class="theater-review-votes">
+        <ul>
+          <li> <%= review.rating %>/5 </li>
+          <%= link_to "upvote", review_votes_path(review, value: "upvote"), id: 'upvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
+          <%= link_to "downvote", review_votes_path(review, value: "downvote"), id: 'downvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
+          <li id="upvotes-<%= review.id %>">Upvotes: <%= review.upvotes %></li>
+          <li id="downvotes-<%= review.id %>">Downvotes: <%= review.downvotes %></li>
+        </ul>
+      </div>
+
+      <span>
+        <%= review.body %>
+      </span>
+
+      <div class="theater-reviewer">
+        <% if review.user == current_user %>
+          <%= link_to 'Edit Review', edit_theater_review_path(@theater,review) %>
+          <%= link_to 'Delete Review', theater_review_path(@theater,review), method: :delete%>
+        <% end %>
+      </div>
+    </div>
     <% end %>
-<% end %>
-<%= render "reviews/review_form", theater: @theater, review: @review %>
-<div id='answer'></div>
+
+<div class="theater-rating-form">
+  <%= render "reviews/review_form", theater: @theater, review: @review %>
+  <div id='answer'></div>
+</div>
