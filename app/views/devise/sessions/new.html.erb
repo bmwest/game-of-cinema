@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Sign In</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="signin.css">
   </head>
   <body>
     <h2>Log in</h2>
@@ -12,26 +16,20 @@
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, class:"input" %>
-      </div>
-
-      <div class="field">
         <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "off", class:"input" %>
-      </div>
-
       <% if devise_mapping.rememberable? -%>
-        <div class="field">
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me %>
-        </div>
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Sign In" %>
+        <%= f.submit "Sign In", class:"mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
       </div>
     </div>
     <% end %>
-
+    <div class="links">
     <%= render "devise/shared/links" %>
+    </div>
   </body>
 </html>

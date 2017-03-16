@@ -71,6 +71,15 @@ img {
   border-radius: 50%;
 }
 
+.profileLogo {
+  border-radius: 15px 50px;
+  padding: 20px;
+  width: 70px;
+  height: 70px;
+  display: inline
+
+}
+
 .movieLogo {
   padding: 6px;
   width: 150px;
