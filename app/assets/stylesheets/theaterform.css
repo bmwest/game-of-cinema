@@ -2,8 +2,27 @@ body {
   background-color: #E8ECED;
 
 }
+.theaterimage {
+margin: auto;
+display: block;
+position: relative;
+width: 200px;
+height: 200px;
+overflow: hidden;
+}
 
+.imageinfo {
+  margin: auto;
+  position: relative;
+  text-align: center;
 
+}
+
+.linksto {
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
 .form {
   background: grey;
   margin: auto;
