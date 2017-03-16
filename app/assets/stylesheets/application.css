@@ -70,3 +70,12 @@ img {
 .profile_picture{
   border-radius: 50%;
 }
+
+.movieLogo {
+  padding: 6px;
+  width: 150px;
+}
+
+.header {
+  background: #EC1361;
+}
