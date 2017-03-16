@@ -22,7 +22,7 @@
   <% @reviews.each do |review| %>
     <p><%= review.user.first_name %></p>
     <% if review.user.avatar.url.present? %>
-      <div class="container" style = "height:100px; width:100px">
+      <div class="profileLogo">
           <%= image_tag(review.user.avatar.url)%>
         </div>
     <% end %>
