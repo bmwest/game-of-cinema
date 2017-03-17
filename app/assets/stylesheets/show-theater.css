@@ -46,6 +46,7 @@
   font-variant: normal;
   font-weight: 200;
   line-height: 60px;
+  margin-left: 40px;
 }
 
 .theater-rating h1 {
@@ -87,6 +88,7 @@
 
 .theater-reviews p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
   font-weight: 200;
   margin-left: 25%;
   margin-right: 25%;
@@ -94,6 +96,7 @@
   padding: 10px;
   border-bottom: 1px dotted #000;
 }
+
 
 
 .theater-review-body p {
@@ -121,7 +124,8 @@
 .profileLogo {
   border-radius: 15px 50px;
   padding: 20px;
-  width: 150px;
+  width: 70px;
   height: 70px;
-  display: inline;
+  display: inline
+
 }
