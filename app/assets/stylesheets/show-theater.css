@@ -98,7 +98,8 @@
 }
 
 
-.theater-review-body {
+
+.theater-review-body p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
   margin-left: 25%;
@@ -126,4 +127,5 @@
   width: 70px;
   height: 70px;
   display: inline
+
 }
