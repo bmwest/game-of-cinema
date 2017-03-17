@@ -13,8 +13,8 @@ feature 'user upvotes' do
     scenario 'upvote', js: true do
       visit theater_path(theater)
 
-      expect(page).to have_selector('#upvote')
-      expect(page).to have_selector('#downvote')
+      expect(page).to have_selector('.upvote')
+      expect(page).to have_selector('.downvote')
 
       page.all('#upvote')[0].trigger('click')
 
@@ -25,8 +25,8 @@ feature 'user upvotes' do
     scenario 'user undos upvote', js: true do
       visit theater_path(theater)
 
-      expect(page).to have_selector('#upvote')
-      expect(page).to have_selector('#downvote')
+      expect(page).to have_selector('.upvote')
+      expect(page).to have_selector('.downvote')
 
       page.all('#upvote')[0].trigger('click')
 
@@ -41,8 +41,8 @@ feature 'user upvotes' do
     scenario 'user undos down', js: true do
       visit theater_path(theater)
 
-      expect(page).to have_selector('#upvote')
-      expect(page).to have_selector('#downvote')
+      expect(page).to have_selector('.upvote')
+      expect(page).to have_selector('.downvote')
 
       page.all('#downvote')[0].trigger('click')
 
@@ -57,8 +57,8 @@ feature 'user upvotes' do
     scenario 'downvote', js: true do
       visit theater_path(theater)
 
-      expect(page).to have_selector('#upvote')
-      expect(page).to have_selector('#downvote')
+      expect(page).to have_selector('.upvote')
+      expect(page).to have_selector('.downvote')
 
       page.all('#downvote')[0].trigger('click')
 
@@ -69,8 +69,8 @@ feature 'user upvotes' do
     scenario 'user switches votes', js: true do
       visit theater_path(theater)
 
-      expect(page).to have_selector('#upvote')
-      expect(page).to have_selector('#downvote')
+      expect(page).to have_selector('.upvote')
+      expect(page).to have_selector('.downvote')
 
       page.all('#downvote')[0].trigger('click')
 
