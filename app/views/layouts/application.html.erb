@@ -28,16 +28,17 @@
      <div class="header">
        <div class="mdl-layout__header-row">
          <span class="android-title mdl-layout-title">
-           <img class="movieLogo" src="https://www.weddingfriends.co.za/wp-content/themes/weddingFriends1/images/cinema.png">
+            <%= link_to root_path do %>
+              <img class="movieLogo" src="https://www.weddingfriends.co.za/wp-content/themes/weddingFriends1/images/cinema.png">
+            <% end %>
          </span>
          <div class="android-header-spacer mdl-layout-spacer"></div>
 
 
          <%= form_tag search_index_path, :method => "get", id: "search-from" do %>
          <div class:"mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <%= label_tag :search %>
             <%= text_field_tag :search, params[:search], placeholder: "search by: name, city, state, or zip", :required => true%>
-            <%= submit_tag "Search", :name => nil, class:"material-icons"%>
+            <%= submit_tag "Search", :name => nil%>
           </div>
         <% end %>
          <!-- Navigation -->
