@@ -20,7 +20,7 @@ class TheaterList extends Component {
   }
 
   getData() {
-    fetch('https://game-of-cinema.herokuapp.com/api/v1/theaters.json')
+    fetch('https://game-of-cinema.herokuapp.com/api/v1/theaters')
       .then(response => {
         if (response.ok) {
           return response;
