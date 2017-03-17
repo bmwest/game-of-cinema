@@ -1,4 +1,4 @@
-$('#upvote').on('click', function(e) {
+$('.upvote').on('click', function(e) {
    e.preventDefault();
 
    var $this = $(this);
@@ -16,7 +16,7 @@ $('#upvote').on('click', function(e) {
     });
   });
 
-$('#downvote').on('click', function(e) {
+$('.downvote').on('click', function(e) {
    e.preventDefault();
 
    var $this = $(this);
