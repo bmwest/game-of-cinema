@@ -37,6 +37,7 @@
 
          <%= form_tag search_index_path, :method => "get", id: "search-from" do %>
          <div class:"mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <%= label_tag :search %>
             <%= text_field_tag :search, params[:search], placeholder: "search by: name, city, state, or zip", :required => true%>
             <%= submit_tag "Search", :name => nil%>
           </div>
