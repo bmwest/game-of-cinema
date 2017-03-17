@@ -37,12 +37,12 @@
   <p class="title">Reviews</p>
     <% @reviews.each do |review| %>
     <div class="theater-reviews">
-      <p><%= review.user.first_name %></p>
       <% if review.user.avatar.url.present? %>
-        <div class="container" style = "height:100px; width:100px">
-            <%= image_tag(review.user.avatar.url)%>
-        </div>
+        <div class="profileLogo">
+            <%= image_tag(review.user.avatar.url, class:"profileLogo") %>
+         </div>
       <% end %>
+      <p><em><%= review.user.first_name %></em></p>
 
       <div class="theater-review-votes">
         <ul>
@@ -54,9 +54,9 @@
         </ul>
       </div>
 
-      <span>
-        <%= review.body %>
-      </span>
+      <div class="theater-review-body">
+        <p><%= review.body %></p>
+      </div>
 
       <div class="theater-reviewer">
         <% if review.user == current_user %>

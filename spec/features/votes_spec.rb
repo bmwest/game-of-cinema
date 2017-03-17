@@ -16,7 +16,7 @@ feature 'user upvotes' do
       expect(page).to have_selector('#upvote')
       expect(page).to have_selector('#downvote')
 
-      page.all('#upvote')[0].click
+      page.all('#upvote')[0].trigger('click')
 
       expect(page).to have_content('Upvotes: 1')
       expect(page).to have_content('Downvotes: 0')
@@ -28,11 +28,11 @@ feature 'user upvotes' do
       expect(page).to have_selector('#upvote')
       expect(page).to have_selector('#downvote')
 
-      page.all('#upvote')[0].click
+      page.all('#upvote')[0].trigger('click')
 
       expect(page).to have_content('Upvotes: 1')
 
-      page.all('#upvote')[0].click
+      page.all('#upvote')[0].trigger('click')
 
       expect(page).to have_content('Upvotes: 0')
       expect(page).to_not have_content('Upvotes: 1')
@@ -44,11 +44,11 @@ feature 'user upvotes' do
       expect(page).to have_selector('#upvote')
       expect(page).to have_selector('#downvote')
 
-      page.all('#downvote')[0].click
+      page.all('#downvote')[0].trigger('click')
 
       expect(page).to have_content('Downvotes: 1')
 
-      page.all('#downvote')[0].click
+      page.all('#downvote')[0].trigger('click')
 
       expect(page).to have_content('Downvotes: 0')
       expect(page).to_not have_content('Downvotes: 1')
@@ -60,7 +60,7 @@ feature 'user upvotes' do
       expect(page).to have_selector('#upvote')
       expect(page).to have_selector('#downvote')
 
-      page.all('#downvote')[0].click
+      page.all('#downvote')[0].trigger('click')
 
       expect(page).to have_content('Upvotes: 0')
       expect(page).to have_content('Downvotes: 1')
@@ -72,12 +72,12 @@ feature 'user upvotes' do
       expect(page).to have_selector('#upvote')
       expect(page).to have_selector('#downvote')
 
-      page.all('#downvote')[0].click
+      page.all('#downvote')[0].trigger('click')
 
       expect(page).to have_content('Upvotes: 0')
       expect(page).to have_content('Downvotes: 1')
 
-      page.all('#upvote')[0].click
+      page.all('#upvote')[0].trigger('click')
 
       expect(page).to have_content('Upvotes: 1')
       expect(page).to have_content('Downvotes: 0')
