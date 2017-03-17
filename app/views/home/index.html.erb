@@ -1,10 +1,6 @@
 <h3>The Top 5</h3>
 <h3>Most Reviewed Theaters</h3>
-<ol>
-  <% @most_reviewed.each do |theater| %>
-    <li> <%= link_to theater.name, theater_path(theater) %> | reviews: <%=theater.reviews.count%> </li>
-  <% end %>
-</ol>
+<div id="TopFive" ></div>
 
 
 <div id="article-list">
