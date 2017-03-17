@@ -32,12 +32,6 @@
 </div>
 
   <p class="title">Reviews</p>
-    <% @reviews.each do |review| %>
-    <% if current_user.avatar.url.present? %>
-      <a class="profileLogo" >
-          <%= image_tag(current_user.avatar.url, class:"profileLogo") %>
-       </a>
-    <% end %>
     <div class="theater-reviews">
       <% if review.user.avatar.url.present? %>
         <div class="profileLogo">
