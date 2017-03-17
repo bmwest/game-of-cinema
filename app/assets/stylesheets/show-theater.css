@@ -129,3 +129,19 @@
   display: inline
 
 }
+
+.theater-creator {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  margin: auto;
+  padding: 10px;
+}
+
+.theater-reviewer {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
