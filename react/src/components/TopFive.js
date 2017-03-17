@@ -3,7 +3,7 @@ import TopFiveItem from './TopFiveItem';
 
 class TopFive extends Component {
   constructor(props) {
-  super(props)
+  super(props);
     this.state = {
       theaters: [],
     };
@@ -39,8 +39,8 @@ class TopFive extends Component {
       return (a.reviews.length) - (b.reviews.length);
     });
 
-    TopTheaters = TopTheaters.reverse()
-    TopTheaters = TopTheaters.slice(0,5)
+    TopTheaters = TopTheaters.reverse();
+    TopTheaters = TopTheaters.slice(0,5);
     let TopFive = TopTheaters.map((theater, index) => {
       return (
         <TopFiveItem
