@@ -11,7 +11,7 @@ class TopFive extends Component {
   }
 
   getData() {
-    fetch('https://game-of-cinema.herokuapp.com/api/v1/theaters')
+    fetch('https://game-of-cinema.herokuapp.com/api/v1/theaters.json')
       .then(response => {
         if (response.ok) {
           return response;
