@@ -21,12 +21,14 @@
   max-height: 40%;
   max-width: 40%;
   float: right;
+  padding: 10px;
+  background-color: #FBFFE3;
 }
 
 .theater-info h1 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
-  font-size: 50px;
+  font-size: 45px;
   font-style: normal;
   font-variant: normal;
   line-height: 60px;
@@ -39,7 +41,7 @@
 
 .theater-info p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-variant: normal;
   font-weight: 200;
@@ -90,11 +92,11 @@
   margin-right: 25%;
   margin-bottom: 0px;
   padding: 10px;
-  border-top: 1px dotted #000;
+  border-bottom: 1px dotted #000;
 }
 
 
-.span {
+.theater-review-body p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
   margin-left: 25%;
@@ -107,4 +109,19 @@
 .theater-rating-form {
   padding: 20px;
   margin: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  position: relative;
+  line-height: 60px;
+}
+
+.profileLogo {
+  border-radius: 15px 50px;
+  padding: 20px;
+  width: 150px;
+  height: 70px;
+  display: inline;
 }

@@ -14,6 +14,16 @@
  *= require_self
  */
 
+.article-index {
+  overflow-y: scroll;
+  height: 60vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 50vw;
+}
 
 .profileLogo {
   border-radius: 15px 50px;
@@ -59,15 +69,6 @@
 
 .profile_picture{
   border-radius: 50%;
-}
-
-.profileLogo {
-  border-radius: 15px 50px;
-  padding: 20px;
-  width: 70px;
-  height: 70px;
-  display: inline
-
 }
 
 .movieLogo {
