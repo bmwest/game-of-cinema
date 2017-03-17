@@ -44,8 +44,8 @@
       <div class="theater-review-votes">
         <ul>
           <li> <%= review.rating %>/5 </li>
-          <%= link_to "upvote", review_votes_path(review, value: "upvote"), id: 'upvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
-          <%= link_to "downvote", review_votes_path(review, value: "downvote"), id: 'downvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
+          <%= link_to "upvote", review_votes_path(review, value: "upvote"), id: 'upvote', class: 'upvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
+          <%= link_to "downvote", review_votes_path(review, value: "downvote"),id: 'downvote', class: 'downvote', data: { theaterid: "#{@theater.id}", reviewid: "#{review.id}" } %>
           <li id="upvotes-<%= review.id %>">Upvotes: <%= review.upvotes %></li>
           <li id="downvotes-<%= review.id %>">Downvotes: <%= review.downvotes %></li>
         </ul>

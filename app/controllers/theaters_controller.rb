@@ -12,7 +12,7 @@ class TheatersController < ApplicationController
   def show
     @theater = Theater.find(params[:id])
     @creator = @theater.user
-    @reviews = @theater.reviews
+    @reviews = @theater.reviews.sort_by(&:created_at)
     @review = Review.new
     @rating_start = 0
   end
