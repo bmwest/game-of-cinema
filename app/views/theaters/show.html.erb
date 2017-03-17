@@ -39,6 +39,12 @@
        </a>
     <% end %>
     <div class="theater-reviews">
+      <% if review.user.avatar.url.present? %>
+        <div class="profileLogo">
+            <%= image_tag(review.user.avatar.url, class:"profileLogo") %>
+         </div>
+      <% end %>
+
       <p><em><%= review.user.first_name %></em></p>
 
       <div class="theater-review-votes">
