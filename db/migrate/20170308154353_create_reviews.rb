@@ -7,8 +7,6 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.integer :theater_id, null: false
       t.integer :upvotes, default: 0
       t.integer :downvotes, default: 0
-
-      t.timestamps
     end
   end
 end
