@@ -53,7 +53,7 @@ class TopFive extends Component {
     });
 
     return(
-      <div className="TopTheaters">
+      <div>
         <ol>
           {TopFive}
         </ol>

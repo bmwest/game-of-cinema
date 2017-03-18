@@ -1,0 +1,42 @@
+.TopFiveTitle{
+  margin: 0px;
+  text-align: center;
+}
+
+.TopFive {
+  display:table;
+  margin:0px auto;
+}
+
+.article-index {
+  margin-top: 0px;
+  border: double;
+  height:70vh;
+  overflow-y: scroll;
+}
+
+.article-item {
+  text-align: center;
+  border-bottom: dotted;
+}
+
+.article-info{
+  margin:0px;
+}
+
+.article-pic {
+  border: hidden;
+  border-radius: 50%;
+  width: 25vw;
+  height:25vh;
+  object-fit: scale-down;
+}
+
+.article-link {
+  text-align:center;
+}
+
+.movie-title {
+  margin: 0px;
+  text-align: center;
+}

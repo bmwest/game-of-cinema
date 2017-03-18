@@ -69,7 +69,8 @@ class TheaterList extends Component {
         <li
         key={number}
         id={number}
-        onClick={this.handleClick}>
+        onClick={this.handleClick}
+        className="page-number">
 
         {number}
         </li>

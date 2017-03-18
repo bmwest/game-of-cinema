@@ -14,11 +14,6 @@
  *= require_self
  */
 
-.article-index {
-  overflow-y: scroll;
-  height: 60vh;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -78,4 +73,24 @@ img {
 
 .header {
   background: #EC1361;
+}
+
+ul{
+  margin:auto;
+  padding:0px;
+  list-style-type:none;
+  display: table
+}
+.page-number {
+  margin: 3px;
+  padding:5px;
+  border:hidden;
+  border-radius: 12px;
+  background-color: #EC1361;
+  float:left;
+  text-align: center;
+}
+
+.theater-list-item {
+  text-align: center;
 }

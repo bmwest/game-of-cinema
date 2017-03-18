@@ -46,7 +46,7 @@ class ArticleList extends Component {
       if (article.multimedia.length > 0) {
         image_url = article.multimedia[article.multimedia.length - 1].url;
       } else {
-        image_url = '../../app/assets/images/image-not-found.png';
+        image_url = null;
       }
 
       return (
@@ -63,9 +63,8 @@ class ArticleList extends Component {
     });
     return(
       <div className="article-index">
-        <h1>Movie News!</h1>
         {newArticles}
-        <h3><a href="https://www.nytimes.com/section/movies">More Articles!</a></h3>
+        <h4 className="article-link"><a href="https://www.nytimes.com/section/movies">More Articles!</a></h4>
       </div>
     )
   }
